@@ -1,10 +1,21 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
+
+    void Awake()
+    { 
+        GameObject[] objs = GameObject.FindGameObjectsWithTag("PauseMenuUtility");
+
+        for (int i = 0; i < objs.Length; i++)
+        {
+            DontDestroyOnLoad(objs[i]);
+        }
+    }
 
     void Update()
     {
@@ -20,7 +31,7 @@ public class PauseMenu : MonoBehaviour
                 Pause();
             }
         }
-        
+
     }
 
     public void Resume()
