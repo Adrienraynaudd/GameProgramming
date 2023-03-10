@@ -21,7 +21,7 @@ public class PlayerHealth : MonoBehaviour
     void Update()
     {
     }
-    /*public void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         if (!isinvincible)
         {
@@ -46,6 +46,6 @@ public class PlayerHealth : MonoBehaviour
         {
         yield return new WaitForSeconds(invincibilityTime);
         isinvincible = false;
-        }*/
+        }
 }
 

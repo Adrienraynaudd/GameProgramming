@@ -368,7 +368,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -678,7 +678,7 @@ GameObject:
   - component: {fileID: 296814186}
   m_Layer: 0
   m_Name: fondation
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23368,7 +23368,7 @@ GameObject:
   - component: {fileID: 368852631}
   m_Layer: 0
   m_Name: water
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46215,6 +46215,7 @@ GameObject:
   - component: {fileID: 391351590}
   - component: {fileID: 391351595}
   - component: {fileID: 391351594}
+  - component: {fileID: 391351596}
   m_Layer: 0
   m_Name: skull
   m_TagString: Untagged
@@ -46255,7 +46256,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.6748333, y: 0}
+  m_Offset: {x: 0.6748333, y: -0.33785778}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -46266,7 +46267,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 17.018513, y: 0.8125}
+  m_Size: {x: 17.018513, y: 0.13678443}
   m_EdgeRadius: 0
 --- !u!212 &391351592
 SpriteRenderer:
@@ -46347,6 +46348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e577961d91c64e343923aa6a6412f89d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageOnTouch: 20
 --- !u!58 &391351595
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -46363,6 +46365,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.013183634}
   serializedVersion: 2
   m_Radius: 0.38940537
+--- !u!50 &391351596
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 391351589}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 5
 --- !u!1 &611667163
 GameObject:
   m_ObjectHideFlags: 0
@@ -46461,8 +46484,13 @@ MonoBehaviour:
   healthBar: {fileID: 124359674}
   invincibilityTime: 3
   invincibilityFlashDelay: 0.2
-  graphics: {fileID: 0}
+  graphics: {fileID: 938083050}
   isinvincible: 0
+--- !u!212 &938083050 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4174586175692898060, guid: 010c40106fc47574085c2697387a65b1, type: 3}
+  m_PrefabInstance: {fileID: 4174586175497974654}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1110663046
 GameObject:
   m_ObjectHideFlags: 0
@@ -46476,7 +46504,7 @@ GameObject:
   - component: {fileID: 1110663048}
   m_Layer: 0
   m_Name: props
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -69475,8 +69503,16 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8447969078801712815, guid: 947e6097eff4aee4c98205fe7c0e58a2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447969078801712815, guid: 947e6097eff4aee4c98205fe7c0e58a2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447969078801712815, guid: 947e6097eff4aee4c98205fe7c0e58a2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.5003977
+      value: -6.5004025
       objectReference: {fileID: 0}
     - target: {fileID: 8447969078801712815, guid: 947e6097eff4aee4c98205fe7c0e58a2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -69492,15 +69528,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8447969078801712815, guid: 947e6097eff4aee4c98205fe7c0e58a2, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8447969078801712815, guid: 947e6097eff4aee4c98205fe7c0e58a2, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8447969078801712815, guid: 947e6097eff4aee4c98205fe7c0e58a2, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8447969078801712815, guid: 947e6097eff4aee4c98205fe7c0e58a2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
