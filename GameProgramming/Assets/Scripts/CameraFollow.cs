@@ -7,6 +7,9 @@ public class CameraFollow : MonoBehaviour
     public Vector3 posOffset;
 
     private Vector3 velocity;
+
+
+
     void Update()
     {
 
