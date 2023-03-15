@@ -32,6 +32,9 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+         if (Input.GetKeyDown(KeyCode.H)){
+            TakeDamage(100);
+        }
     }
     public void HealPlayer(int healAmount)
     {
@@ -48,6 +51,11 @@ public class PlayerHealth : MonoBehaviour
         {
             currentHealth -= damage;
             healthBar.SetHealth(currentHealth);
+            if(currentHealth <= 0)
+            {
+                Die();
+                return;
+            }
             isinvincible = true;
             StartCoroutine(invincibilityFlash());
             StartCoroutine(HandleInvincibilityDelay());
@@ -68,5 +76,10 @@ public class PlayerHealth : MonoBehaviour
         yield return new WaitForSeconds(invincibilityTime);
         isinvincible = false;
         }
+        public void Die()
+        {
+            Debug.Log("Player died!");
+            PlayerMovement.instance.enabled = false;
+            PlayerMovement.instance.animator.SetTrigger("Die");
+        }
 }
-
