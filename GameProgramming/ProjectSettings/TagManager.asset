@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PauseMenuUtility
   - FadeSysteme
+  - PlayerSpawn
   layers:
   - Default
   - TransparentFX
