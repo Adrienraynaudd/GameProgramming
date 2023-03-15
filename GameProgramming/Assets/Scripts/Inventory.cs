@@ -22,6 +22,6 @@ public class Inventory : MonoBehaviour
    public void AddCoin(int count)
    {
        coinCount += count;
-         coinText.text = coinCount.ToString();
+        //  coinText.text = coinCount.ToString();
    }
 }
