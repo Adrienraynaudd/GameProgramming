@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - PauseMenuUtility
+  - FadeSysteme
   layers:
   - Default
   - TransparentFX
