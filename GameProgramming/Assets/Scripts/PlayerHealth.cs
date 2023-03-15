@@ -11,6 +11,18 @@ public class PlayerHealth : MonoBehaviour
     public float invincibilityFlashDelay = 0.2f;
     public SpriteRenderer graphics;
     public bool isinvincible = false;
+
+    public static PlayerHealth instance;
+
+   private void Awake()
+   {
+       if (instance != null)
+       {
+           Debug.LogWarning("More than one instance of PlayerHealth found!");
+           return;
+       }
+       instance = this;
+   }
     void Start()
     {
         currentHealth = maxHealth;
@@ -20,6 +32,15 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+    }
+    public void HealPlayer(int healAmount)
+    {
+        currentHealth += healAmount;
+        if (currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+        healthBar.SetHealth(currentHealth);
     }
     public void TakeDamage(int damage)
     {
