@@ -50,6 +50,12 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = true;
     }
 
+    public void Quit()
+    {
+        Debug.Log("Quitting game...");
+        Application.Quit();
+    }
+
     // public void LoadMenu()
     // {
     //     DontDestroyOnLoadScene.instance.RemoveFromDontDestroyOnLoad();
