@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask collisionLayer;
 
     public Rigidbody2D rb;
+    public CapsuleCollider2D playerCollider;
     public Animator animator;
     public SpriteRenderer spriteRenderer;
     private Vector3 velocity = Vector3.zero;
@@ -34,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, collisionLayer);
-        float horizontalMovement = Input.GetAxis("Horizontal") * MoveSpeed;
+        float horizontalMovement = Input.GetAxis("Horizontal") * MoveSpeed*Time.fixedDeltaTime;
 
         if (Input.GetButtonDown("Jump")&& isGrounded)
         {

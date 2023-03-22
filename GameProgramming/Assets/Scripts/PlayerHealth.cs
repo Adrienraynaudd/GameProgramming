@@ -13,6 +13,7 @@ public class PlayerHealth : MonoBehaviour
     public bool isinvincible = false;
 
     public static PlayerHealth instance;
+    
 
    private void Awake()
    {
@@ -81,5 +82,8 @@ public class PlayerHealth : MonoBehaviour
             Debug.Log("Player died!");
             PlayerMovement.instance.enabled = false;
             PlayerMovement.instance.animator.SetTrigger("Die");
+            PlayerMovement.instance.rb.bodyType = RigidbodyType2D.Static;
+            PlayerMovement.instance.playerCollider.enabled = false;
+            GameOverManager.instance.OnPlayerDeath();
         }
 }
