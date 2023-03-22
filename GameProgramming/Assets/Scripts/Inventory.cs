@@ -24,4 +24,9 @@ public class Inventory : MonoBehaviour
        coinCount += count;
         coinText.text = coinCount.ToString();
    }
+   public void RemoveCoin(int count)
+   {
+       coinCount -= count;
+        coinText.text = coinCount.ToString();
+   }
 }

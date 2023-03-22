@@ -9,6 +9,7 @@ public class PickUpObject : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             Inventory.instance.AddCoin(1);
+            CurrentSceneManager.instance.CoinsPickedUp++;
             Destroy(gameObject);
         }
     }

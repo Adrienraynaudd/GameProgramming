@@ -428,7 +428,7 @@ GameObject:
   - component: {fileID: 126508799}
   - component: {fileID: 126508798}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Restart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -498,7 +498,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 126508799}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1871713251}
+        m_TargetAssemblyTypeName: GameOverManager, Assembly-CSharp
+        m_MethodName: RestartButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &126508799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70156,7 +70168,7 @@ GameObject:
   - component: {fileID: 1252729130}
   - component: {fileID: 1252729129}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: Quit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -70226,7 +70238,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1252729130}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1871713251}
+        m_TargetAssemblyTypeName: GameOverManager, Assembly-CSharp
+        m_MethodName: quitButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1252729130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70533,7 +70557,7 @@ GameObject:
   - component: {fileID: 1898567413}
   - component: {fileID: 1898567412}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -70603,7 +70627,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1898567413}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1871713251}
+        m_TargetAssemblyTypeName: GameOverManager, Assembly-CSharp
+        m_MethodName: MenuButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1898567413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70970,6 +71006,63 @@ PrefabInstance:
       objectReference: {fileID: 938083054}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 010c40106fc47574085c2697387a65b1, type: 3}
+--- !u!1001 &6162183176242046921
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4425600709188210307, guid: 90a0de1ac0bc9594b89db34067e5efa1, type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 4425600709188210307, guid: 90a0de1ac0bc9594b89db34067e5efa1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -11.318191
+      objectReference: {fileID: 0}
+    - target: {fileID: 4425600709188210307, guid: 90a0de1ac0bc9594b89db34067e5efa1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5064571
+      objectReference: {fileID: 0}
+    - target: {fileID: 4425600709188210307, guid: 90a0de1ac0bc9594b89db34067e5efa1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0152357
+      objectReference: {fileID: 0}
+    - target: {fileID: 4425600709188210307, guid: 90a0de1ac0bc9594b89db34067e5efa1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4425600709188210307, guid: 90a0de1ac0bc9594b89db34067e5efa1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4425600709188210307, guid: 90a0de1ac0bc9594b89db34067e5efa1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4425600709188210307, guid: 90a0de1ac0bc9594b89db34067e5efa1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4425600709188210307, guid: 90a0de1ac0bc9594b89db34067e5efa1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4425600709188210307, guid: 90a0de1ac0bc9594b89db34067e5efa1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4425600709188210307, guid: 90a0de1ac0bc9594b89db34067e5efa1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7420957074820558905, guid: 90a0de1ac0bc9594b89db34067e5efa1, type: 3}
+      propertyPath: m_Name
+      value: CurrentSceneManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 90a0de1ac0bc9594b89db34067e5efa1, type: 3}
 --- !u!1001 &8447969080014081027
 PrefabInstance:
   m_ObjectHideFlags: 0
