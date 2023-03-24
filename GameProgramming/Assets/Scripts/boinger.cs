@@ -21,12 +21,12 @@ public class boinger : MonoBehaviour
             case "up":
                 BounceUp(collision.gameObject);
                 break;
-            // case "down":
-            //     BounceDown();
-            //     break;
-            // case "left":
-            //     BounceLeft();
-            //     break;
+            case "down":
+                BounceDown(collision.gameObject);
+                break;
+            case "left":
+                BounceLeft(collision.gameObject);
+                break;
             case "right":
                 BounceRight(collision.gameObject);
                 break;
@@ -65,6 +65,42 @@ public class boinger : MonoBehaviour
             {
                 bounceTime -= Time.deltaTime;
                 player.GetComponent<Rigidbody2D>().velocity = new Vector2(27f , 0.1f) * bounceForce;
+            }
+            else
+            {
+                bounceTime = 0.5f;
+                OnBoinger = false;
+            }
+
+        }
+    }
+
+    public void BounceDown(GameObject player)
+    {
+        if (OnBoinger == true)
+        {
+            if (bounceTime > 0)
+            {
+                bounceTime -= Time.deltaTime;
+                player.GetComponent<Rigidbody2D>().AddForce(Vector2.down * bounceForce, ForceMode2D.Impulse);
+            }
+            else
+            {
+                bounceTime = 0.5f;
+                OnBoinger = false;
+            }
+
+        }
+    }
+
+    public void BounceLeft(GameObject player)
+    {
+        if (OnBoinger == true)
+        {
+            if (bounceTime > 0)
+            {
+                bounceTime -= Time.deltaTime;
+                player.GetComponent<Rigidbody2D>().velocity = new Vector2(-27f , 0.1f) * bounceForce;
             }
             else
             {
