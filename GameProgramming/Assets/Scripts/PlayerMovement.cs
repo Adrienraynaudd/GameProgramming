@@ -16,19 +16,26 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask collisionLayer;
 
     public Rigidbody2D rb;
+    public CapsuleCollider2D playerCollider;
     public Animator animator;
     public SpriteRenderer spriteRenderer;
     private Vector3 velocity = Vector3.zero;
-    void Start()
-    {
-        
-    }
+    public static PlayerMovement instance;
 
+   private void Awake()
+   {
+       if (instance != null)
+       {
+           Debug.LogWarning("More than one instance of PlayerMouvement found!");
+           return;
+       }
+       instance = this;
+   }
     // Update is called once per frame
     void Update()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, collisionLayer);
-        float horizontalMovement = Input.GetAxis("Horizontal") * MoveSpeed;
+        float horizontalMovement = Input.GetAxis("Horizontal") * MoveSpeed*Time.fixedDeltaTime;
 
         if (Input.GetButtonDown("Jump")&& isGrounded)
         {
