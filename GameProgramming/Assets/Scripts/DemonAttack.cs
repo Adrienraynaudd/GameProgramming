@@ -27,6 +27,7 @@ public class DemonAttack : MonoBehaviour
         {
             target = collision.transform;
             Vector3 dir = target.position - transform.position;
+            dir.y=0;
              transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
              if(dir.magnitude<5)
              {
@@ -52,10 +53,10 @@ public class DemonAttack : MonoBehaviour
     {
          target = collision.transform;
         Vector3 dir = target.position - transform.position;
-        transform.Translate(Vector3.up * 500 * Time.deltaTime, Space.World);
+        transform.Translate(Vector3.up * 1000 * Time.deltaTime, Space.World);
          myAnimator.SetTrigger("JumpAttack");
-        yield return new WaitForSeconds(10f);
-             transform.Translate(dir.normalized * 50 * Time.deltaTime, Space.World);
+        yield return new WaitForSeconds(5f);
+        transform.position = new Vector3(target.position.x +3, target.position.y + 1, 0);
         myAnimator.SetTrigger("notJump");
     }
     private IEnumerator randint(Collider2D collision)
