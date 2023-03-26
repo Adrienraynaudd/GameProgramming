@@ -14,5 +14,14 @@ public class Trap : MonoBehaviour
         
     }
 
-    
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            PlayerHealth playerHealth = collision.transform.GetComponent<PlayerHealth>();
+            playerHealth.TakeDamage(10000);
+        }
+    }
+
 }
