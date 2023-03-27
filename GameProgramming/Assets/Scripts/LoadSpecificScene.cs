@@ -6,6 +6,7 @@ public class LoadSpecificScene : MonoBehaviour
 {
     public string sceneName;
     public Animator fadeSystem;
+    public AudioClip sound;
     void Awake()
     {
         fadeSystem = GameObject.FindGameObjectWithTag("FadeSysteme").GetComponent<Animator>();
@@ -19,8 +20,9 @@ public class LoadSpecificScene : MonoBehaviour
     }
     public IEnumerator LoadScene()
     {
+        AudioManager.instance.PlayClipAt(sound, transform.position);
         fadeSystem.SetTrigger("FadeIn");
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2.36f);
         SceneManager.LoadScene(sceneName);
     }
 }

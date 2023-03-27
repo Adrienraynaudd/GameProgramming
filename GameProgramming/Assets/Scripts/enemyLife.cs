@@ -6,6 +6,7 @@ public class enemyLife : MonoBehaviour
 {
     // Start is called before the first frame update
     public int maxHealth = 100;
+    public AudioClip killSound;
     int currentHealth;
     void Start()
     {
@@ -22,6 +23,7 @@ public class enemyLife : MonoBehaviour
     }
     void Die()
     {
+        AudioManager.instance.PlayClipAt(killSound, transform.position);
         Debug.Log("Enemy died!");
         Destroy(gameObject);
     }

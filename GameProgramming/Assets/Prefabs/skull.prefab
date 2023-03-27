@@ -30,7 +30,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7730277004540398943}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 30.7054, y: 0.461, z: 0}
   m_LocalScale: {x: 0.9754, y: 1.1079, z: 1}
   m_ConstrainProportionsScale: 0
@@ -200,3 +200,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  killSound: {fileID: 8300000, guid: fa56ef18fc551fe4f8262a3ad782328a, type: 3}
