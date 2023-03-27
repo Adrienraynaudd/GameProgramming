@@ -6,7 +6,7 @@ public class DemonAttack : MonoBehaviour
 {
 
 
-     public int speed = 2;
+    public int speed = 2;
     private Transform target;
     private Animator myAnimator;
     public int damageOnTouch = 20;
