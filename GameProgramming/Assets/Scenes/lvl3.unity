@@ -103423,5 +103423,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Payer
       objectReference: {fileID: 0}
+    - target: {fileID: 4174586175692898065, guid: 010c40106fc47574085c2697387a65b1, type: 3}
+      propertyPath: MoveSpeed
+      value: 250
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 010c40106fc47574085c2697387a65b1, type: 3}
