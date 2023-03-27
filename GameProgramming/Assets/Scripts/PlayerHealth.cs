@@ -31,9 +31,6 @@ public class PlayerHealth : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-    }
     public void HealPlayer(int healAmount)
     {
         currentHealth += healAmount;
