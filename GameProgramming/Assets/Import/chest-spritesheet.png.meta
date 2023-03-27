@@ -1,12 +1,12 @@
 fileFormatVersion: 2
-guid: 5e7aced2d8bef5b44a0ad6137c3da776
+guid: 19f4b3281ad821c4daf1f7b9cb898731
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
+    enableMipMap: 1
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -36,9 +36,9 @@ TextureImporter:
     filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -51,7 +51,7 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 1
+  alphaIsTransparency: 0
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Coin_Sparkle_0
+      name: chest-spritesheet_0
       rect:
         serializedVersion: 2
-        x: 12
-        y: 11
-        width: 8
-        height: 10
+        x: 0
+        y: 0
+        width: 20
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6fe7f8de02b848248804bc4233584d9d
-      internalID: -4179771
+      spriteID: 1dae53727f2d8aa49969e293eb5df81b
+      internalID: 1101849345
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Coin_Sparkle_1
+      name: chest-spritesheet_1
       rect:
         serializedVersion: 2
-        x: 45
-        y: 11
-        width: 6
-        height: 11
+        x: 20
+        y: 0
+        width: 20
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1572fc34457e6bd49b79b8c1899822a7
-      internalID: 1715290628
+      spriteID: 7413dea84494b674086be220c7121f73
+      internalID: 478586699
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Coin_Sparkle_2
+      name: chest-spritesheet_2
       rect:
         serializedVersion: 2
-        x: 78
-        y: 11
-        width: 7
-        height: 12
+        x: 40
+        y: 0
+        width: 20
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,71 +173,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3412b66cb65965744bfc86649d45db88
-      internalID: -1316991663
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Coin_Sparkle_3
-      rect:
-        serializedVersion: 2
-        x: 110
-        y: 11
-        width: 9
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d0d56c0172be12d458da63d2ab95f61c
-      internalID: 1276050605
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Coin_Sparkle_4
-      rect:
-        serializedVersion: 2
-        x: 142
-        y: 11
-        width: 5
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4b0d2425bb9f39e4bb7c1d564f6dbbb0
-      internalID: 28847100
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Coin_Sparkle_5
-      rect:
-        serializedVersion: 2
-        x: 173
-        y: 11
-        width: 6
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 078a70312c955854f9688d582bfc4d6b
-      internalID: 1278339683
+      spriteID: 942590889fa0af642bf0c76ea59c3ed2
+      internalID: 1741964876
       vertices: []
       indices: 
       edges: []
@@ -245,7 +182,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: ac42440451a67da459751b7e09de40a8
     internalID: 0
     vertices: []
     indices: 
@@ -253,12 +190,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Coin_Sparkle_5: 1278339683
-      Coin_Sparkle_1: 1715290628
-      Coin_Sparkle_0: -4179771
-      Coin_Sparkle_3: 1276050605
-      Coin_Sparkle_2: -1316991663
-      Coin_Sparkle_4: 28847100
+      chest-spritesheet_2: 1741964876
+      chest-spritesheet_0: 1101849345
+      chest-spritesheet_1: 478586699
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

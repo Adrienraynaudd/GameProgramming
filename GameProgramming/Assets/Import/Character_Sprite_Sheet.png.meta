@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -631,7 +631,6 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Character_Sprite_Sheet_24: 1720041497
       Character_Sprite_Sheet_8: 1295874345
       Character_Sprite_Sheet_18: -796680787
       Character_Sprite_Sheet_2: 1569311617
@@ -653,6 +652,7 @@ TextureImporter:
       Character_Sprite_Sheet_1: 883008529
       Character_Sprite_Sheet_9: 1289836002
       Character_Sprite_Sheet_21: 1844339216
+      Character_Sprite_Sheet_24: 1720041497
       Character_Sprite_Sheet_13: 1865422779
       Character_Sprite_Sheet_7: 921974888
       Character_Sprite_Sheet_10: 562099913
