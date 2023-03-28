@@ -7,16 +7,6 @@ public class PauseMenu : MonoBehaviour
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
 
-    void Awake()
-    { 
-        GameObject[] objs = GameObject.FindGameObjectsWithTag("PauseMenuUtility");
-
-        for (int i = 0; i < objs.Length; i++)
-        {
-            DontDestroyOnLoad(objs[i]);
-        }
-    }
-
     void Update()
     {
 
@@ -55,10 +45,4 @@ public class PauseMenu : MonoBehaviour
         Debug.Log("Quitting game...");
         Application.Quit();
     }
-
-    // public void LoadMenu()
-    // {
-    //     DontDestroyOnLoadScene.instance.RemoveFromDontDestroyOnLoad();
-    //     SceneManager.LoadScene("MainMenu");
-    // }
 }
