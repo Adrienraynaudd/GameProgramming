@@ -20,7 +20,7 @@ public class LoadSpecificScene : MonoBehaviour
     }
     public IEnumerator LoadScene()
     {
-        LoadAndSaveScene.instance.SaveData();
+        //LoadAndSaveScene.instance.SaveData();
         AudioManager.instance.PlayClipAt(sound, transform.position);
         fadeSystem.SetTrigger("FadeIn");
         yield return new WaitForSeconds(2.36f);

@@ -47,7 +47,7 @@ public class AudioManager : MonoBehaviour
         tempGO.transform.position = pos; // set its position
         AudioSource aSource = tempGO.AddComponent<AudioSource>(); // add an audio source
         aSource.clip = clip; // define the clip
-         //aSource.outputAudioMixerGroup = soundEffectMixer; // set the output to the sound effect mix
+        aSource.outputAudioMixerGroup = soundEffectMixer; // set the output to the sound effect mix
         aSource.Play(); // start the sound
         Destroy(tempGO, clip.length); // destroy object after clip duration
         return aSource; // return the AudioSource reference
