@@ -78,7 +78,7 @@ GameObject:
   - component: {fileID: 8281617875601829132}
   - component: {fileID: 8281617874440807325}
   - component: {fileID: 8281617874440807307}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -253,6 +253,7 @@ MonoBehaviour:
   invincibilityFlashDelay: 0.2
   graphics: {fileID: 8281617875601829130}
   isinvincible: 0
+  hitSound: {fileID: 8300000, guid: cc17b23b54e80f14c8156835c9213330, type: 3}
 --- !u!114 &8281617874440807307
 MonoBehaviour:
   m_ObjectHideFlags: 0
