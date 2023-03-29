@@ -23,4 +23,8 @@ public class MainMenu : MonoBehaviour
     {
         settingMenu.SetActive(false);
     }
+    public void CreditsButton()
+    {
+        SceneManager.LoadScene("credits");
+    }
 }
