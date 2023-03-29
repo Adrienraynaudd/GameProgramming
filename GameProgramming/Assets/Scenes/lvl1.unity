@@ -69527,6 +69527,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
+    - target: {fileID: 1170496839453658, guid: ca7a680a3baad354fac647e594f5ebd0, type: 3}
+      propertyPath: m_Volume
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 1170496839453661, guid: ca7a680a3baad354fac647e594f5ebd0, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -70054,6 +70058,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1871713251}
+    - target: {fileID: 6928289477070625745, guid: 3a7141444dd14b8478a493f4660973de, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6928289477070625745, guid: 3a7141444dd14b8478a493f4660973de, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6928289477077521741, guid: 3a7141444dd14b8478a493f4660973de, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

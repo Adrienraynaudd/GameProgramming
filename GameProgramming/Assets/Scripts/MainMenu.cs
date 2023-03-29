@@ -27,4 +27,8 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("credits");
     }
+    public void ContinueButton()
+    {
+        SceneManager.LoadScene("SelectLvl");
+    }
 }
