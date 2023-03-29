@@ -44,5 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fde6d381bb12c7b4bbde460fc5297092, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPlayerPresent: 0
   CoinsPickedUp: 0
+  PlayerRespawnPosition: {x: 0, y: 0, z: 0}
