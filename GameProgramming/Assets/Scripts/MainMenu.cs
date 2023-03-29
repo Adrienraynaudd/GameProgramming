@@ -23,4 +23,12 @@ public class MainMenu : MonoBehaviour
     {
         settingMenu.SetActive(false);
     }
+    public void CreditsButton()
+    {
+        SceneManager.LoadScene("credits");
+    }
+    public void ContinueButton()
+    {
+        SceneManager.LoadScene("SelectLvl");
+    }
 }
