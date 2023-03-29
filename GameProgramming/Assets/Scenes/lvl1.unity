@@ -72864,6 +72864,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3407240641773220538, guid: f4aa71cecd131e540bd506e8cc4d4ecb, type: 3}
+      propertyPath: sceneName
+      value: lvl0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407240641773220538, guid: f4aa71cecd131e540bd506e8cc4d4ecb, type: 3}
       propertyPath: fadeSystem
       value: 
       objectReference: {fileID: 1043057096}
