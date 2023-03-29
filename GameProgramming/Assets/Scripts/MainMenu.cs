@@ -9,6 +9,8 @@ public class MainMenu : MonoBehaviour
     public GameObject settingMenu;
    public void SartGame()
    {
+      
+      PlayerPrefs.DeleteAll();
       SceneManager.LoadScene(startLevel);
    }
     public void SettingButton()
