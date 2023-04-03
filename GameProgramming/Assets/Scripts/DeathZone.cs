@@ -1,11 +1,12 @@
 using UnityEngine;
 using System.Collections;
-public class DeathZone : MonoBehaviour {
-    private Transform playerSpawn;
+public class DeathZone : MonoBehaviour
+
+{
+
     private Animator fadeSystem;
     private void Awake()
     {
-       playerSpawn = GameObject.FindGameObjectWithTag("PlayerSpawn").transform;
        fadeSystem = GameObject.FindGameObjectWithTag("FadeSysteme").GetComponent<Animator>();
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -19,6 +20,6 @@ public class DeathZone : MonoBehaviour {
     {
         fadeSystem.SetTrigger("FadeIn");
         yield return new WaitForSeconds(1f);
-         collision.transform.position = playerSpawn.position;
+        collision.transform.position = GameObject.FindGameObjectWithTag("PlayerSpawn").transform.position;
     }
 }

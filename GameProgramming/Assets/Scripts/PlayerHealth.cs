@@ -11,6 +11,7 @@ public class PlayerHealth : MonoBehaviour
     public float invincibilityFlashDelay = 0.2f;
     public SpriteRenderer graphics;
     public bool isinvincible = false;
+    public AudioClip hitSound;
 
     public static PlayerHealth instance;
     
@@ -44,6 +45,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (!isinvincible)
         {
+            AudioManager.instance.PlayClipAt(hitSound, transform.position);
             currentHealth -= damage;
             healthBar.SetHealth(currentHealth);
             if(currentHealth <= 0)

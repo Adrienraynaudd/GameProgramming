@@ -136,3 +136,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healPoints: 20
+  sound: {fileID: 8300000, guid: b1ef8fb19321e3e4e98e4b515f2af016, type: 3}

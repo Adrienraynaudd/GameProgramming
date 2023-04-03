@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class CurrentSceneManager : MonoBehaviour
 {
-    public bool isPlayerPresent = false;
     public int CoinsPickedUp;
      public static CurrentSceneManager  instance;
    private void Awake()

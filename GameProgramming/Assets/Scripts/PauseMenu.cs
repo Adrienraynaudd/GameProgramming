@@ -6,16 +6,8 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
+    public GameObject settingMenuUI;
 
-    void Awake()
-    { 
-        GameObject[] objs = GameObject.FindGameObjectsWithTag("PauseMenuUtility");
-
-        for (int i = 0; i < objs.Length; i++)
-        {
-            DontDestroyOnLoad(objs[i]);
-        }
-    }
 
     void Update()
     {
@@ -24,7 +16,7 @@ public class PauseMenu : MonoBehaviour
         {
             if (GameIsPaused)
             {
-                Resume();
+                Continue();
             }
             else
             {
@@ -34,31 +26,33 @@ public class PauseMenu : MonoBehaviour
 
     }
 
-    public void Resume()
+    public void Continue()
     {
-        // PlayerMovement.instance.enabled = true;
+        PlayerMovement.instance.enabled = true;
         pauseMenuUI.SetActive(false);
-        Time.timeScale = 1f;
+        Time.timeScale = 1;
         GameIsPaused = false;
     }
 
     void Pause()
     {
-        // PlayerMovement.instance.enabled = false;
+        PlayerMovement.instance.enabled = false;
         pauseMenuUI.SetActive(true);
-        Time.timeScale = 0f;
+        Time.timeScale = 0;
         GameIsPaused = true;
     }
-
-    public void Quit()
+    public void MainMenuButton()
     {
-        Debug.Log("Quitting game...");
-        Application.Quit();
+        Continue();
+        DontDestroyOnLoadScene.instance.RemoveDontDestroyOnLoad();
+        SceneManager.LoadScene("Main_menu");
     }
-
-    // public void LoadMenu()
-    // {
-    //     DontDestroyOnLoadScene.instance.RemoveFromDontDestroyOnLoad();
-    //     SceneManager.LoadScene("MainMenu");
-    // }
+    public void OpenSettingMenu()
+    {
+        settingMenuUI.SetActive(true);
+    }
+    public void CloseSettingMenu()
+    {
+        settingMenuUI.SetActive(false);
+    }
 }
