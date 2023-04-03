@@ -11,7 +11,8 @@ public class MainMenu : MonoBehaviour
    {
       
       PlayerPrefs.DeleteAll();
-      SceneManager.LoadScene(startLevel);
+      PlayerPrefs.SetString("startLevel", startLevel);
+      SceneManager.LoadScene("PreLoad");
    }
     public void SettingButton()
     {

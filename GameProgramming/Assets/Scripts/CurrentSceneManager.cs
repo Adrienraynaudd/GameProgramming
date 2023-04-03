@@ -4,7 +4,6 @@ public class CurrentSceneManager : MonoBehaviour
 {
     public int CoinsPickedUp;
      public static CurrentSceneManager  instance;
-     public Vector3 PlayerRespawnPosition;
    private void Awake()
    {
        if (instance != null)
@@ -13,7 +12,5 @@ public class CurrentSceneManager : MonoBehaviour
            return;
        }
        instance = this;
-
-       PlayerRespawnPosition = GameObject.Find("Player").transform.position;
    }
 }
