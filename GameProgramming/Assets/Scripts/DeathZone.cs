@@ -1,8 +1,6 @@
 using UnityEngine;
 using System.Collections;
-public class DeathZone : MonoBehaviour
-
-{
+public class DeathZone : MonoBehaviour {
     private Transform playerSpawn;
     private Animator fadeSystem;
     private void Awake()
@@ -24,4 +22,3 @@ public class DeathZone : MonoBehaviour
          collision.transform.position = playerSpawn.position;
     }
 }
- 
