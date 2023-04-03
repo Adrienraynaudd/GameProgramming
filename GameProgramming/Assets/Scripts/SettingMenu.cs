@@ -58,5 +58,6 @@ public class SettingMenu : MonoBehaviour
     {
         Resolution resolution = resolutions[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+         text.text = resolution.width + " x " + resolution.height;
     }
 }
