@@ -9,6 +9,7 @@ TagManager:
   - PlayerSpawn
   - InteractUI
   - chest
+  - pnj
   layers:
   - Default
   - TransparentFX
