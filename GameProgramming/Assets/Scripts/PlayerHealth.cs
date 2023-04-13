@@ -25,11 +25,6 @@ public class PlayerHealth : MonoBehaviour
        }
        instance = this;
    }
-    void Start()
-    {
-        currentHealth = maxHealth;
-        healthBar.SetMaxHealth(maxHealth);
-    }
 
     // Update is called once per frame
     public void HealPlayer(int healAmount)

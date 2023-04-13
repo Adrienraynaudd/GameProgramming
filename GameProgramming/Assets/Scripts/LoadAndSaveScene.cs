@@ -24,6 +24,6 @@ public class LoadAndSaveScene : MonoBehaviour
     public void SaveData()
     {
         PlayerPrefs.SetInt("CoinCount", Inventory.instance.coinCount);
-         PlayerPrefs.SetInt("PlayerHeal", PlayerHealth.instance.currentHealth);
+        PlayerPrefs.SetInt("PlayerHeal", PlayerHealth.instance.currentHealth);
     }
 }
