@@ -1,15 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
     // Start is called before the first frame update
     public float MoveSpeed;
     public float JumpForce;
+    public PauseMenu pauseMenu;
 
     private bool isGrounded;
-    private bool isJumping = false;
 
     public Transform groundCheck;
     public float groundCheckRadius;
@@ -21,6 +22,8 @@ public class PlayerMovement : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     private Vector3 velocity = Vector3.zero;
     public static PlayerMovement instance;
+
+    private float horizontalMovement;
 
    private void Awake()
    {
@@ -35,26 +38,16 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, collisionLayer);
-        float horizontalMovement = Input.GetAxis("Horizontal") * MoveSpeed*Time.fixedDeltaTime;
-
-        if (Input.GetButtonDown("Jump")&& isGrounded)
-        {
-           isJumping = true;
-        }
         MovePlayer(horizontalMovement);
+
         Flip(rb.velocity.x);
         float characterVelocity = Mathf.Abs(rb.velocity.x);
         animator.SetFloat("Speed", characterVelocity);
     }
     void MovePlayer(float _horizontalMovement)
     {
-        Vector3 targetVelocity = new Vector2(_horizontalMovement, rb.velocity.y);
+        Vector3 targetVelocity = new Vector3(_horizontalMovement, rb.velocity.y,0);
         rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
-        if (isJumping == true)
-        {
-            rb.AddForce(new Vector2(0f,JumpForce));
-            isJumping = false;
-        }
     }
     void Flip(float _velocity)
     {
@@ -67,6 +60,37 @@ public class PlayerMovement : MonoBehaviour
             spriteRenderer.flipX = true;
         }
     }
+
+    void OnMove(InputValue movementValue)
+    {
+        Vector2 movementVector = movementValue.Get<Vector2>();
+        horizontalMovement = movementVector.x * MoveSpeed;
+    }
+
+    void OnJump()
+    {
+        if (isGrounded)
+        {
+            rb.AddForce(new Vector2(0f,JumpForce));
+        }
+    }
+
+    void OnPause(){
+        pauseMenu.OnPause();
+    }
+
+
+    void OnInteract(){
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right * (GetComponent<CapsuleCollider2D>().size.x/2), 1f, collisionLayer);
+        if (hit.collider == null || hit.collider.tag != "chest") hit = Physics2D.Raycast(transform.position, Vector2.left * (GetComponent<CapsuleCollider2D>().size.x/2), 1f, collisionLayer);
+        if (hit.collider != null && hit.collider.tag == "chest")
+        {
+            hit.collider.GetComponent<Chest>().OnInteract();
+        }
+    }
+
+
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;

@@ -11,19 +11,19 @@ public class PauseMenu : MonoBehaviour
 
     void Update()
     {
+        
+    }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+    public void OnPause()
+    {
+        if (GameIsPaused)
         {
-            if (GameIsPaused)
-            {
-                Continue();
-            }
-            else
-            {
-                Pause();
-            }
+            Continue();
         }
-
+        else
+        {
+            Pause();
+        }
     }
 
     public void Continue()

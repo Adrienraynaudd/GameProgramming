@@ -18,10 +18,12 @@ public class Chest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E) && isInRange)
-        {
-            OpenChest();
-        }
+
+    }
+
+    public void OnInteract()
+    {
+        OpenChest();
     }
     void OpenChest()
     {
@@ -29,7 +31,6 @@ public class Chest : MonoBehaviour
         animator.SetTrigger("OpenChest");
         Inventory.instance.AddCoin(coinsToGive);
         GetComponent<BoxCollider2D>().enabled = false;
-        isInRange = false;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -37,7 +38,6 @@ public class Chest : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             interactUI.enabled = true;
-            isInRange = true;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -45,7 +45,6 @@ public class Chest : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             interactUI.enabled = false;
-            isInRange = false;
         }
     }
 }
