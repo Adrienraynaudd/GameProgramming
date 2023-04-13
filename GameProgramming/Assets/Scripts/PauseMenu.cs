@@ -1,12 +1,14 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.EventSystems;
 
 public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
     public GameObject settingMenuUI;
+
+    public EventSystem eventSystem;
 
 
     void Update()
@@ -40,6 +42,8 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0;
         GameIsPaused = true;
+
+        eventSystem.SetSelectedGameObject(pauseMenuUI.transform.GetChild(1).gameObject);
     }
     public void MainMenuButton()
     {

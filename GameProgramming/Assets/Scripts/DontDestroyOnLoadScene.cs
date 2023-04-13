@@ -23,6 +23,7 @@ public GameObject[] objects;
     {
         foreach (var element in objects)
         {
+            Debug.Log("removing");
             SceneManager.MoveGameObjectToScene(element, SceneManager.GetActiveScene());
         }
     }

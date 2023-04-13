@@ -1223,7 +1223,7 @@ GameObject:
   - component: {fileID: 1615849331}
   - component: {fileID: 1615849330}
   - component: {fileID: 1615849332}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: parcours
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15825,7 +15825,7 @@ GameObject:
   - component: {fileID: 1623650092}
   - component: {fileID: 1623650094}
   - component: {fileID: 1623650093}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: decors
   m_TagString: Untagged
   m_Icon: {fileID: 0}
