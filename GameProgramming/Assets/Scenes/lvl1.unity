@@ -132,8 +132,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 153868726}
-  - component: {fileID: 153868727}
   - component: {fileID: 153868728}
+  - component: {fileID: 153868729}
   m_Layer: 0
   m_Name: "esgargotPh\xF4n"
   m_TagString: Untagged
@@ -157,27 +157,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &153868727
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 153868725}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1a31234a1865a846bbe4cb57cbd525e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    name: Gary
-    sentences:
-    - 'Bonjours, je m''appelle Gary '
-    - "Un terrible d\xE9mon a d\xE9truit ma ville et tu\xE9 mon ami bob.\r\nS'il
-      vous pla\xEEt tuer ce terrible d\xE9mon et ramener la paix dans le monde "
-    - "Suivez les portails et traverser diff\xE9rent monde pour le retrouver.\r\nBonne
-      Chance Jeune Aventurier"
-  isTriggered: 0
 --- !u!61 &153868728
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -204,6 +183,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.5336208, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &153868729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153868725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91e33c99f0ec98c439302d2ebdb7d5cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Gary
+    sentences:
+    - Bonjours, je m'appelle Gary
+    - "Un d\xE9mon a d\xE9truit ma ville et tuer mon ami bob \r\nVenge-nous jeune
+      aventurier D\xE9truit ce d\xE9mon"
+    - "Empreint ces genre de portails pour le suivre dans diff\xE9rent monde \n\rBonne
+      chance"
+  isTriggered: 0
 --- !u!1 &273154981
 GameObject:
   m_ObjectHideFlags: 0
