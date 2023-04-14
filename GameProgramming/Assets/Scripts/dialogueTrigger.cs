@@ -43,6 +43,7 @@ public class dialogueTrigger : MonoBehaviour
             isTriggered = false;
             
             interactUI.enabled = false;
+            DialogueManager.instance.EndDialogue();
         }
     }
      void TriggerDialogue()
