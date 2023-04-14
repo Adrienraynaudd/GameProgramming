@@ -1,8 +1,11 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class GameOverManager : MonoBehaviour
 {
+
+    public EventSystem eventSystem;
      public static GameOverManager instance;
 
    private void Awake()
@@ -19,6 +22,7 @@ public class GameOverManager : MonoBehaviour
     public void OnPlayerDeath()
     {
         gameOverUI.SetActive(true);
+        eventSystem.SetSelectedGameObject(gameOverUI.transform.GetChild(1).gameObject);
     }
     public void RestartButton()
     {
@@ -29,6 +33,7 @@ public class GameOverManager : MonoBehaviour
     }
     public void MenuButton()
     {
+        DontDestroyOnLoadScene.instance.RemoveDontDestroyOnLoad();
         SceneManager.LoadScene("Main_menu");
     }
     public void quitButton()

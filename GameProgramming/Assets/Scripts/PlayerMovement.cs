@@ -25,15 +25,15 @@ public class PlayerMovement : MonoBehaviour
 
     private float horizontalMovement;
 
-   private void Awake()
-   {
-       if (instance != null)
-       {
-           Debug.LogWarning("More than one instance of PlayerMouvement found!");
-           return;
-       }
-       instance = this;
-   }
+    private void Awake()
+    {
+        if (instance != null)
+        {
+            Debug.LogWarning("More than one instance of PlayerMouvement found!");
+            return;
+        }
+        instance = this;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -46,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
     }
     void MovePlayer(float _horizontalMovement)
     {
-        Vector3 targetVelocity = new Vector3(_horizontalMovement, rb.velocity.y,0);
+        Vector3 targetVelocity = new Vector3(_horizontalMovement, rb.velocity.y, 0);
         rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
     }
     void Flip(float _velocity)
@@ -71,21 +71,33 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isGrounded)
         {
-            rb.AddForce(new Vector2(0f,JumpForce));
+            rb.AddForce(new Vector2(0f, JumpForce));
         }
     }
 
-    void OnPause(){
+    void OnPause()
+    {
         pauseMenu.OnPause();
     }
 
 
-    void OnInteract(){
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right * (GetComponent<CapsuleCollider2D>().size.x/2), 1f, collisionLayer);
-        if (hit.collider == null || hit.collider.tag != "chest") hit = Physics2D.Raycast(transform.position, Vector2.left * (GetComponent<CapsuleCollider2D>().size.x/2), 1f, collisionLayer);
+    void OnInteract()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right * (GetComponent<CapsuleCollider2D>().size.x / 2), 1f, LayerMask.GetMask("Interactables"));
+
+        if (hit.collider == null || (hit.collider.tag != "chest" && hit.collider.tag != "pnj"))
+        {
+            hit = Physics2D.Raycast(transform.position, Vector2.left * (GetComponent<CapsuleCollider2D>().size.x / 2), 1f, LayerMask.GetMask("Interactables"));
+        }
         if (hit.collider != null && hit.collider.tag == "chest")
         {
             hit.collider.GetComponent<Chest>().OnInteract();
+            Debug.Log("TEST");
+        }
+        else if (hit.collider != null && hit.collider.tag == "pnj")
+        {
+            hit.collider.GetComponent<dialogueTrigger>().OnInteract();
+            Debug.Log("TEST");
         }
     }
 
