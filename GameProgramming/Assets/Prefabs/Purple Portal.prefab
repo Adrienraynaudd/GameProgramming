@@ -99,8 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 369d2bd144c983e47902206ef30c9d2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: lvl2
-  fadeSystem: {fileID: 0}
+  sceneName: 
   sound: {fileID: 8300000, guid: 2f3b214f8ba1dfc43a87e7ac4781cc4b, type: 3}
 --- !u!61 &3407240641773220539
 BoxCollider2D:

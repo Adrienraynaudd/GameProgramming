@@ -23,4 +23,3 @@ public class DeathZone : MonoBehaviour
         collision.transform.position = GameObject.FindGameObjectWithTag("PlayerSpawn").transform.position;
     }
 }
- 
