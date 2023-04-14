@@ -29,6 +29,7 @@ public class DialogueManager : MonoBehaviour
         button.Select();
         animator.SetBool("isOpen", true);
         namePNJ.text = dialogue.name;
+        
         sentences.Clear();
         foreach (string sentence in dialogue.sentences)
         {

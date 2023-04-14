@@ -14,16 +14,25 @@ public class dialogueTrigger : MonoBehaviour
     }
     void Update()
     {
-        if (isTriggered && Input.GetKeyDown(KeyCode.E))
-        {
-            TriggerDialogue();
-        }
+        // if (isTriggered && Input.GetKeyDown(KeyCode.E))
+        // {
+        //     TriggerDialogue();
+        // }
     }
+
+
+    public void OnInteract()
+    {
+        TriggerDialogue();
+    }
+
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
             isTriggered = true;
+            
             interactUI.enabled = true;
         }
     }
@@ -32,6 +41,7 @@ public class dialogueTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isTriggered = false;
+            
             interactUI.enabled = false;
         }
     }

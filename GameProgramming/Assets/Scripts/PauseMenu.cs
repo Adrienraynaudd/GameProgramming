@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.EventSystems;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -8,22 +8,24 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenuUI;
     public GameObject settingMenuUI;
 
+    public EventSystem eventSystem;
+
 
     void Update()
     {
+        
+    }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+    public void OnPause()
+    {
+        if (GameIsPaused)
         {
-            if (GameIsPaused)
-            {
-                Continue();
-            }
-            else
-            {
-                Pause();
-            }
+            Continue();
         }
-
+        else
+        {
+            Pause();
+        }
     }
 
     public void Continue()
@@ -40,6 +42,8 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0;
         GameIsPaused = true;
+
+        eventSystem.SetSelectedGameObject(pauseMenuUI.transform.GetChild(1).gameObject);
     }
     public void MainMenuButton()
     {

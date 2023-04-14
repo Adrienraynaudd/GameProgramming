@@ -8,6 +8,8 @@ TagManager:
   - FadeSysteme
   - PlayerSpawn
   - InteractUI
+  - chest
+  - pnj
   layers:
   - Default
   - TransparentFX
@@ -25,8 +27,8 @@ TagManager:
   - 
   - boingUp
   - boingRight
-  - 
-  - 
+  - map
+  - Interactables
   - 
   - 
   - 

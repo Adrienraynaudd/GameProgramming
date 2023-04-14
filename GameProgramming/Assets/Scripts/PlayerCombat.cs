@@ -14,10 +14,12 @@ public class PlayerCombat : MonoBehaviour
     public int attackDamage = 50;
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            Attack();
-        }
+
+    }
+
+    void OnAttack ()
+    {
+        Attack();   
     }
 
     void Attack()
