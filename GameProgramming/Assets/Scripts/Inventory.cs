@@ -10,11 +10,12 @@ public class Inventory : MonoBehaviour
    public int coinCount;
    public Text coinText;
    public List<item> items = new List<item>();
-   public int index = 0 ;
+   private int index = 0 ;
    public Image itemImage;
     public TextMeshProUGUI NameItem;
    public Sprite defaultImage;
    public static Inventory instance;
+   public PlayerEffect playerEffect;
 
    private void Awake()
    {
@@ -36,7 +37,7 @@ public class Inventory : MonoBehaviour
     }
     item item = items[index];
     PlayerHealth.instance.HealPlayer(item.hp);
-    PlayerMovement.instance.MoveSpeed += item.speed;
+    playerEffect.AddSpeed(item.speed, item.duration);
     items.Remove(item);
     GetNextItem();
     UpdateUI();

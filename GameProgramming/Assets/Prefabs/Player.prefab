@@ -78,6 +78,8 @@ GameObject:
   - component: {fileID: 8281617875601829132}
   - component: {fileID: 8281617874440807325}
   - component: {fileID: 8281617874440807307}
+  - component: {fileID: 677505833}
+  - component: {fileID: 677505834}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -203,13 +205,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 481e53e687a0ba14dbca1b3db41635d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 300
+  MoveSpeed: 10
   JumpForce: 300
+  pauseMenu: {fileID: 0}
   groundCheck: {fileID: 8281617874107221303}
   groundCheckRadius: 0.5
   collisionLayer:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 65536
   rb: {fileID: 8281617875601829128}
   playerCollider: {fileID: 8281617875601829129}
   animator: {fileID: 8281617875601829132}
@@ -273,3 +276,45 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   attackDamage: 50
+--- !u!114 &677505833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8281617875601829142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 015920b578fcc1a42b178c40262c0c7d, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!114 &677505834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8281617875601829142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ad16fc4ce440f345a7bd70d6b85e021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

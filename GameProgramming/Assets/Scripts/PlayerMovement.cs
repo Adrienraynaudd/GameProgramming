@@ -92,16 +92,16 @@ public class PlayerMovement : MonoBehaviour
         if (hit.collider != null && hit.collider.tag == "chest")
         {
             hit.collider.GetComponent<Chest>().OnInteract();
-            Debug.Log("TEST");
         }
         else if (hit.collider != null && hit.collider.tag == "pnj")
         {
             hit.collider.GetComponent<dialogueTrigger>().OnInteract();
-            Debug.Log("TEST");
-        }
+        }else if (hit.collider != null && hit.collider.tag == "item")
+        {
+            hit.collider.GetComponent<PickUpItem>().OnInteract();
     }
 
-
+    }
 
     private void OnDrawGizmos()
     {
