@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: SpeedPotion
   m_EditorClassIdentifier: 
   id: 2
-  names: Speed Potion
+  names: SpeedPotion
   description: Potion to increase speed
   icon: {fileID: 21300000, guid: 0127091d615c1c14d890b8f344b3d52f, type: 3}
   hp: 0
   speed: 5
+  price: 3
   duration: 10

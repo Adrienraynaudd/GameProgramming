@@ -1,13 +1,13 @@
-
 using UnityEngine;
 using UnityEngine.UI;
 
-public class dialogueTrigger : MonoBehaviour
+public class ShopTrigger : MonoBehaviour
 {
-    public Dialogue dialogue;
-    public bool isTriggered ;
+      public bool isTriggered ;
     private Text interactUI;
     // Update is called once per frame
+    public string namePNJ;
+    public item[] items;
     private void Awake()
     {
         interactUI = GameObject.FindGameObjectWithTag("InteractUI").GetComponent<Text>();
@@ -15,7 +15,7 @@ public class dialogueTrigger : MonoBehaviour
   
     public void OnInteract()
     {
-        TriggerDialogue();
+        ShopManager.instance.Shop(items, namePNJ);
     }
 
 
@@ -33,13 +33,8 @@ public class dialogueTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isTriggered = false;
-            
             interactUI.enabled = false;
-            DialogueManager.instance.EndDialogue();
+            ShopManager.instance.EndShop();
         }
-    }
-     void TriggerDialogue()
-    {
-        DialogueManager.instance.StartDialogue(dialogue);
     }
 }
