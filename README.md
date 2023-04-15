@@ -26,9 +26,8 @@ The project belongs to its authors. ✍️
 
 # Instructions :
 
-- First, click
-- Then, click
-- finally, and click
+- First, git clone `https://github.com/Adrienraynaudd/GameProgramming.git`
+- Then, open in Unity > File > Build Settings > Build and Run
 
 Is everything clear ? Alright ! 🎉
 
