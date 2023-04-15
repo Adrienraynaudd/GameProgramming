@@ -141,18 +141,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 345350001, guid: 3a7141444dd14b8478a493f4660973de, type: 3}
+      propertyPath: m_Name
+      value: Nexts
+      objectReference: {fileID: 0}
     - target: {fileID: 345350003, guid: 3a7141444dd14b8478a493f4660973de, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 513643918}
+    - target: {fileID: 585819101, guid: 3a7141444dd14b8478a493f4660973de, type: 3}
+      propertyPath: m_Name
+      value: PRevious
+      objectReference: {fileID: 0}
     - target: {fileID: 585819103, guid: 3a7141444dd14b8478a493f4660973de, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 513643918}
+    - target: {fileID: 893112814, guid: 3a7141444dd14b8478a493f4660973de, type: 3}
+      propertyPath: m_Name
+      value: Text Items
+      objectReference: {fileID: 0}
     - target: {fileID: 1809387633, guid: 3a7141444dd14b8478a493f4660973de, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1073570889}
+    - target: {fileID: 1906003559, guid: 3a7141444dd14b8478a493f4660973de, type: 3}
+      propertyPath: m_Name
+      value: UseItems
+      objectReference: {fileID: 0}
     - target: {fileID: 1906003561, guid: 3a7141444dd14b8478a493f4660973de, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
