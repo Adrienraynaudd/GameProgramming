@@ -85,7 +85,7 @@ public class PlayerMovement : MonoBehaviour
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right * (GetComponent<CapsuleCollider2D>().size.x / 2), 1f, LayerMask.GetMask("Interactables"));
 
-        if (hit.collider == null || (hit.collider.tag != "chest" && hit.collider.tag != "pnj"))
+        if (hit.collider == null || (hit.collider.tag != "chest" && hit.collider.tag != "pnj" && hit.collider.tag != "item"))
         {
             hit = Physics2D.Raycast(transform.position, Vector2.left * (GetComponent<CapsuleCollider2D>().size.x / 2), 1f, LayerMask.GetMask("Interactables"));
         }
