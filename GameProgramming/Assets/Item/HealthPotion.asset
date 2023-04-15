@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: HealthPotion
   m_EditorClassIdentifier: 
   id: 1
-  names: HealthPotion
+  names: Health Potion
   description: Potion restoring 10 hp
   icon: {fileID: 21300000, guid: d8be9f4f411be9c4fbd551e0d060f39b, type: 3}
   hp: 10

@@ -38,6 +38,8 @@ public class ShopManager : MonoBehaviour
             button.GetComponent<ButtonItem>().nameItem.text = items[i].names;
             button.GetComponent<ButtonItem>().iconItem.sprite = items[i].icon;
             button.GetComponent<ButtonItem>().priceItem.text = items[i].price.ToString();
+            button.GetComponent<ButtonItem>().item = items[i];
+            button.GetComponent<Button>().onClick.AddListener((delegate {button.GetComponent<ButtonItem>().Buy();}));
         }
     }
      public void EndShop()
