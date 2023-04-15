@@ -30,6 +30,7 @@ public class Chest : MonoBehaviour
         AudioSource.PlayClipAtPoint(openChestSound, transform.position);
         animator.SetTrigger("OpenChest");
         Inventory.instance.AddCoin(coinsToGive);
+        CurrentSceneManager.instance.CoinsPickedUp += coinsToGive;
         GetComponent<BoxCollider2D>().enabled = false;
     }
 
