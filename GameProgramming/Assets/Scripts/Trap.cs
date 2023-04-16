@@ -4,18 +4,7 @@ using UnityEngine;
 
 public class Trap : MonoBehaviour
 {
-
-    void Start()
-    {
-        
-    }
-    void Update()
-    {
-        
-    }
-
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision) // this is called if the player enter in the trap and if is it true then the player will die
     {
         if (collision.gameObject.tag == "Player")
         {

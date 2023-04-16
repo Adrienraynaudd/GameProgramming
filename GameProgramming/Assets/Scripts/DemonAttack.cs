@@ -26,7 +26,7 @@ public class DemonAttack : MonoBehaviour
             playerHealth.TakeDamage(damageOnTouch);
         }
     }
-     private void OnTriggerStay2D(Collider2D collision)
+     private void OnTriggerStay2D(Collider2D collision) // this is called for check if the player enter in the demon detection area and if it is true then the demon will move to the player
     {
         if (collision.transform.CompareTag("Player"))
         {
@@ -34,12 +34,12 @@ public class DemonAttack : MonoBehaviour
             Vector3 dir = target.position - transform.position;
             dir.y=0;
              transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
-             if(dir.magnitude<5)
+             if(dir.magnitude<5) // if the player is close to the demon then the demon will attack with fireball the player
              {
                     StartCoroutine(Fire(collision));
              }else
              {
-                StartCoroutine(randint(collision));
+                StartCoroutine(randint(collision)); // if the player is far from the demon then the demon will jump to the player
                 if (jump == 1)
                 {
                     StartCoroutine(Jump(collision));
@@ -47,14 +47,14 @@ public class DemonAttack : MonoBehaviour
              }
         }
     }
-    private IEnumerator Fire(Collider2D collision)
+    private IEnumerator Fire(Collider2D collision) // this is called for check if the demon is attacking with fireball
     {
         myAnimator.SetTrigger("Fire");
         yield return new WaitForSeconds(1.5f);
         myAnimator.SetTrigger("notFire");
         
     }
-    private IEnumerator Jump(Collider2D collision)
+    private IEnumerator Jump(Collider2D collision) // this is called for check if the demon is jumping to the player
     {
          target = collision.transform;
         Vector3 dir = target.position - transform.position;

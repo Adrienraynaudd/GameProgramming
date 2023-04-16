@@ -1,7 +1,7 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Item", menuName = "Inventory/Item")]
-public class item : ScriptableObject
+[CreateAssetMenu(fileName = "New Item", menuName = "Inventory/Item")] // this is called to create a new item
+public class item : ScriptableObject // this is type of item that the player can buy
 {
     public int id;
     public string names;

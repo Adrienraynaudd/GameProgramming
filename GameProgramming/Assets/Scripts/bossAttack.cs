@@ -12,11 +12,11 @@ public class bossAttack : MonoBehaviour
     private int teleportation = -1;
     public int distance = 30;
 
-      void Start()
+      void Start() // this is called for get the animator component
     {
         myAnimator = GetComponent<Animator>();
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision) // this is called for check if the boss touch the player and if it is true then the player will take damage
     {
         if (collision.transform.CompareTag("Player"))
         {
@@ -24,7 +24,7 @@ public class bossAttack : MonoBehaviour
             playerHealth.TakeDamage(damageOnTouch);
         }
     }
-        private void OnTriggerStay2D(Collider2D collision){
+        private void OnTriggerStay2D(Collider2D collision){ // this is called for check if the player enter in boss detection area and if it is true then the boss will move to the player and use a random ability
         if(collision.transform.CompareTag("Player")){
             if(!isAttacking){
             StartCoroutine(randint(collision));
@@ -41,7 +41,7 @@ public class bossAttack : MonoBehaviour
             }
         }
         }
-     private IEnumerator randint(Collider2D collision)
+     private IEnumerator randint(Collider2D collision) // this is called for wait 0.3 seconds before the boss can use another ability
     {
         isAttacking = true;
         yield return new WaitForSeconds(0.3f);

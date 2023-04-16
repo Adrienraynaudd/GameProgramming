@@ -9,7 +9,7 @@ public class BatAttack : MonoBehaviour
     public Animator myAnimator;
     public int damageOnTouch = 20;
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision) // this is called for check if the bat touch the player and if it is true then the player will take damage 
     {
         if (collision.transform.CompareTag("Player"))
         {
@@ -17,7 +17,7 @@ public class BatAttack : MonoBehaviour
             playerHealth.TakeDamage(damageOnTouch);
         }
     }
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision) // this is called for check if the player enter in bat detection area and if it is true then the bat will move to the player
     {
         if (collision.transform.CompareTag("Player"))
         {

@@ -4,7 +4,7 @@ using System.Linq;
 using TMPro;
 
 
-public class ButtonItem : MonoBehaviour
+public class ButtonItem : MonoBehaviour // this is called for the button of the shop and if the player have enough coins then the player will buy the item
 {
     public TextMeshProUGUI nameItem;
     public Image iconItem;

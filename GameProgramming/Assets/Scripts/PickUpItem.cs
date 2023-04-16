@@ -17,7 +17,7 @@ public class PickUpItem : MonoBehaviour
     {
         TakeItem();
     }
-    void TakeItem()
+    void TakeItem() // this is called to add the item to the inventory and then destroy the item
     {
       Inventory.instance.items.Add(item);
         Inventory.instance.UpdateUI();

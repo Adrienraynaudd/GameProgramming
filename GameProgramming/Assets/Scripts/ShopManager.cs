@@ -21,13 +21,13 @@ public class ShopManager : MonoBehaviour
         }
         instance = this;
     }
-    public void Shop(item[] items, string name)
+    public void Shop(item[] items, string name) // this is called to open the shop and show the items that the player can buy
     {
         namePNJ.text = name;
         ItemToSell(items);
         animator.SetBool("isOpen", true);
     }
-    void ItemToSell(item[] items){
+    void ItemToSell(item[] items){ // this is called to instantiate the items in the shop
         foreach (Transform child in shopPanel.transform)
         {
             Destroy(child.gameObject);
@@ -42,7 +42,7 @@ public class ShopManager : MonoBehaviour
             button.GetComponent<Button>().onClick.AddListener((delegate {button.GetComponent<ButtonItem>().Buy();}));
         }
     }
-     public void EndShop()
+     public void EndShop() // this is called to close the shop
     {
         animator.SetBool("isOpen", false);
     }

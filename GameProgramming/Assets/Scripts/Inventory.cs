@@ -30,7 +30,7 @@ public class Inventory : MonoBehaviour
     {
          UpdateUI();
     }
-   public void ConsumedItem(){
+   public void ConsumedItem(){ // this is called to consume the item in the inventory and the player will get the effect of the item
     if (items.Count == 0)
     {
         return;
@@ -43,7 +43,7 @@ public class Inventory : MonoBehaviour
     UpdateUI();
 
    }
-   public void GetNextItem()
+   public void GetNextItem() // this is called to get the next item in the inventory
    {
          if (items.Count == 0)
          {
@@ -56,7 +56,7 @@ public class Inventory : MonoBehaviour
        }
          UpdateUI();
    }
-   public void GetPreviousItem()
+   public void GetPreviousItem() // this is called to get the previous item in the inventory
    {
         if (items.Count == 0)
         {
@@ -69,7 +69,7 @@ public class Inventory : MonoBehaviour
          }
          UpdateUI();
    }
-   public void UpdateUI()
+   public void UpdateUI() // this is called to update the UI of the inventory
    {
         if (items.Count > 0)
         {
@@ -83,18 +83,18 @@ public class Inventory : MonoBehaviour
         }
    }
 
-   public void AddCoin(int count)
+   public void AddCoin(int count) // this is called to add the coins in the inventory
    {
        coinCount += count;
        UpdateCoinUI();
    }
-   public void RemoveCoin(int count)
+   public void RemoveCoin(int count) // this is called to remove the coins in the inventory
    {
        coinCount -= count;
         UpdateCoinUI();
    }
 
-   public void UpdateCoinUI()
+   public void UpdateCoinUI() // this is called to update the UI of the coins in the inventory
     {
          coinText.text = coinCount.ToString();
     }

@@ -19,12 +19,12 @@ public class GameOverManager : MonoBehaviour
    }
     public GameObject gameOverUI;
    
-    public void OnPlayerDeath()
+    public void OnPlayerDeath() // this is called to show the game over UI
     {
         gameOverUI.SetActive(true);
         eventSystem.SetSelectedGameObject(gameOverUI.transform.GetChild(1).gameObject);
     }
-    public void RestartButton()
+    public void RestartButton() // this is called to restart the level
     {
         Inventory.instance.RemoveCoin(CurrentSceneManager.instance.CoinsPickedUp);
         CurrentSceneManager.instance.CoinsPickedUp = 0;
@@ -32,12 +32,12 @@ public class GameOverManager : MonoBehaviour
         PlayerHealth.instance.respawnPlayer();
         gameOverUI.SetActive(false);
     }
-    public void MenuButton()
+    public void MenuButton() // this is called to go back to the main menu
     {
         DontDestroyOnLoadScene.instance.RemoveDontDestroyOnLoad();
         SceneManager.LoadScene("Main_menu");
     }
-    public void quitButton()
+    public void quitButton() // this is called to quit the game
     {
         Application.Quit();
     }

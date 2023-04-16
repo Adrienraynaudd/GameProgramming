@@ -10,13 +10,7 @@ public class PauseMenu : MonoBehaviour
 
     public EventSystem eventSystem;
 
-
-    void Update()
-    {
-        
-    }
-
-    public void OnPause()
+    public void OnPause() // this is called to pause the game
     {
         if (GameIsPaused)
         {
@@ -28,7 +22,7 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
-    public void Continue()
+    public void Continue() // this is called to continue the game
     {
         PlayerMovement.instance.enabled = true;
         pauseMenuUI.SetActive(false);
@@ -36,7 +30,7 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = false;
     }
 
-    void Pause()
+    void Pause() // this is called to pause the game and show the pause menu and disable the player movement
     {
         PlayerMovement.instance.enabled = false;
         pauseMenuUI.SetActive(true);
@@ -45,17 +39,17 @@ public class PauseMenu : MonoBehaviour
 
         eventSystem.SetSelectedGameObject(pauseMenuUI.transform.GetChild(1).gameObject);
     }
-    public void MainMenuButton()
+    public void MainMenuButton() // this is called to go back to the main menu
     {
         Continue();
         DontDestroyOnLoadScene.instance.RemoveDontDestroyOnLoad();
         SceneManager.LoadScene("Main_menu");
     }
-    public void OpenSettingMenu()
+    public void OpenSettingMenu() // this is called to open the setting menu
     {
         settingMenuUI.SetActive(true);
     }
-    public void CloseSettingMenu()
+    public void CloseSettingMenu() // this is called to close the setting menu
     {
         settingMenuUI.SetActive(false);
     }
