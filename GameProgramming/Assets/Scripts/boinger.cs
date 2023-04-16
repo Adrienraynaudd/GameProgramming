@@ -9,7 +9,7 @@ public class boinger : MonoBehaviour
     public string orientation = "up";
     private bool OnBoinger = false;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision) // this is called if the player enter in the boinger and if is it true then the player will bump
     {
 
         if (collision.gameObject.tag == "Player")
@@ -39,7 +39,7 @@ public class boinger : MonoBehaviour
         
     }
 
-    public void BounceUp(GameObject player)
+    public void BounceUp(GameObject player) // this is called to bump the player up
     {
         if (OnBoinger == true)
         {   
@@ -57,7 +57,7 @@ public class boinger : MonoBehaviour
         }
     }
 
-    public void BounceRight(GameObject player)
+    public void BounceRight(GameObject player) // this is called to bump the player right
     {
         if (OnBoinger == true)
         {
@@ -75,7 +75,7 @@ public class boinger : MonoBehaviour
         }
     }
 
-    public void BounceDown(GameObject player)
+    public void BounceDown(GameObject player) // this called to bump the player down
     {
         if (OnBoinger == true)
         {
@@ -93,7 +93,7 @@ public class boinger : MonoBehaviour
         }
     }
 
-    public void BounceLeft(GameObject player)
+    public void BounceLeft(GameObject player) // this is called to bump the player left
     {
         if (OnBoinger == true)
         {

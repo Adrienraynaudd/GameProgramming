@@ -18,7 +18,7 @@ public class LoadSpecificScene : MonoBehaviour
             StartCoroutine(LoadScene());
         }
     }
-    public IEnumerator LoadScene()
+    public IEnumerator LoadScene() // this is called to fade in the screen and then the player will respawn in a ne scene
     {
         LoadAndSaveScene.instance.SaveData();
         AudioManager.instance.PlayClipAt(sound, transform.position);

@@ -9,14 +9,14 @@ public class DeathZone : MonoBehaviour
     {
        fadeSystem = GameObject.FindGameObjectWithTag("FadeSysteme").GetComponent<Animator>();
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision) // this is called if the player enter in the death zone and if is it true then the player will respawn
     {
         if (collision.CompareTag("Player"))
         {
             StartCoroutine(FadeIn(collision));
         }
     }
-    private IEnumerator FadeIn(Collider2D collision)
+    private IEnumerator FadeIn(Collider2D collision) // this is called to fade in the screen and then the player will respawn
     {
         fadeSystem.SetTrigger("FadeIn");
         yield return new WaitForSeconds(2.36f);

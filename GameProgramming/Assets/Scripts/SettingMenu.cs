@@ -16,13 +16,13 @@ public class SettingMenu : MonoBehaviour
    public Slider soundEffectSlider;
     public void Start()
     {
-      audioMixer.GetFloat("Music", out float musicValueForSlider);
+      audioMixer.GetFloat("Music", out float musicValueForSlider); // this is called to get the value of the music volume
       musicSlider.value = musicValueForSlider;
 
-      audioMixer.GetFloat("SEffect", out float soundEffectValueForSlider);
+      audioMixer.GetFloat("SEffect", out float soundEffectValueForSlider); // this is called to get the value of the sound effect volume
       soundEffectSlider.value = soundEffectValueForSlider;
 
-      resolutions = Screen.resolutions.Select(resolution => new Resolution { width = resolution.width, height = resolution.height }).Distinct().ToArray();
+      resolutions = Screen.resolutions.Select(resolution => new Resolution { width = resolution.width, height = resolution.height }).Distinct().ToArray(); // this is called to get the resolution of the screen
       resolutionDropdown.ClearOptions();
       List<string> options = new List<string>();
       int currentResolutionIndex = 0;
@@ -41,20 +41,20 @@ public class SettingMenu : MonoBehaviour
       text.text = Screen.width + " x " + Screen.height;
       Screen.fullScreen = true;
     }
-   public void SetVolumeMusic(float volume)
+   public void SetVolumeMusic(float volume) // this is called to set the volume of the music
    {
       audioMixer.SetFloat("Music", volume);
    }
-   public void SetVolumeSoundEffect(float volume)
+   public void SetVolumeSoundEffect(float volume) // this is called to set the volume of the sound effect
    {
       audioMixer.SetFloat("SEffect", volume);
    }
 
-   public void SetFullScreen(bool isFullScreen)
+   public void SetFullScreen(bool isFullScreen) // this is called to set the screen to full screen
    {
       Screen.fullScreen = isFullScreen;
    }
-    public void SetResolution(int resolutionIndex)
+    public void SetResolution(int resolutionIndex) // this is called to set the resolution of the screen
     {
         Resolution resolution = resolutions[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);

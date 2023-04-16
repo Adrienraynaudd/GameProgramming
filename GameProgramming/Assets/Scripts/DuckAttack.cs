@@ -29,12 +29,12 @@ public class DuckAttack : MonoBehaviour
             target = collision.transform;
             Vector3 dir = target.position - transform.position;
             dir.y = 0;
-            if (dir.x > 0){
-                spriteRenderer.flipX = true;
+            if (dir.x > 0){ // if the player is on the right side of the duck then the duck will move to the right side and the projectile will be flipped
+                spriteRenderer.flipX = true; // flip the sprite
                 transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
                 if (!isAttacking){
                     StartCoroutine(Fire(collision));
-                    GameObject proj = Instantiate(projectile, firePoint2.position, firePoint2.rotation);
+                    GameObject proj = Instantiate(projectile, firePoint2.position, firePoint2.rotation); // instantiate the projectile
                     proj.GetComponent<SpriteRenderer>().flipX = true;
                     proj.GetComponent<SpriteRenderer>().flipY = false;
                 }

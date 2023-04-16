@@ -14,12 +14,12 @@ public GameObject[] objects;
        }
        instance = this;
 
-       foreach (var element in objects)
+       foreach (var element in objects) // this is called to add the objects in the scene to the DontDestroyOnLoadScene
         {
             DontDestroyOnLoad(element);
         }
    }
-    public void RemoveDontDestroyOnLoad()
+    public void RemoveDontDestroyOnLoad() // this is called to remove the objects from the DontDestroyOnLoadScene
     {
         foreach (var element in objects)
         {

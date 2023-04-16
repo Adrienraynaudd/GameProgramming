@@ -35,21 +35,21 @@ public class PlayerMovement : MonoBehaviour
         instance = this;
     }
     // Update is called once per frame
-    void Update()
+    void Update() 
     {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, collisionLayer);
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, collisionLayer); // this is called for check if the player is grounded
         MovePlayer(horizontalMovement);
 
         Flip(rb.velocity.x);
         float characterVelocity = Mathf.Abs(rb.velocity.x);
         animator.SetFloat("Speed", characterVelocity);
     }
-    void MovePlayer(float _horizontalMovement)
+    void MovePlayer(float _horizontalMovement) // this is called for move the player
     {
         Vector3 targetVelocity = new Vector3(_horizontalMovement, rb.velocity.y, 0);
         rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
     }
-    void Flip(float _velocity)
+    void Flip(float _velocity) //this is called for flip the sprite of the player
     {
         if (_velocity > 0.1f)
         {
@@ -61,13 +61,13 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void OnMove(InputValue movementValue)
+    void OnMove(InputValue movementValue) // this is called for move the player
     {
         Vector2 movementVector = movementValue.Get<Vector2>();
         horizontalMovement = movementVector.x * MoveSpeed;
     }
 
-    void OnJump()
+    void OnJump() // this is called for jump the player
     {
         if (isGrounded && Time.timeScale != 0)
         {
@@ -83,7 +83,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-    void OnInteract()
+    void OnInteract() // this is called for interact with the pnj, chest, item and shop
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right * (GetComponent<CapsuleCollider2D>().size.x / 2), 1f, LayerMask.GetMask("Interactables"));
 
