@@ -4,14 +4,19 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
 using TMPro;
+using UnityEngine.EventSystems;
 
 public class ShopManager : MonoBehaviour
 {
     public Animator animator;
     public GameObject shopUI;
+
+    public GameObject ShopWindow;
     public Transform shopPanel;
+    public GameObject PanelShop;
     public TextMeshProUGUI namePNJ;
     public static ShopManager instance;
+    public EventSystem eventSystem;
     private void Awake()
     {
         if (instance != null)
@@ -26,6 +31,8 @@ public class ShopManager : MonoBehaviour
         namePNJ.text = name;
         ItemToSell(items);
         animator.SetBool("isOpen", true);
+        Time.timeScale = 0;
+        eventSystem.SetSelectedGameObject(ShopWindow.transform.GetChild(1).gameObject);
     }
     void ItemToSell(item[] items){
         foreach (Transform child in shopPanel.transform)
@@ -39,11 +46,15 @@ public class ShopManager : MonoBehaviour
             button.GetComponent<ButtonItem>().iconItem.sprite = items[i].icon;
             button.GetComponent<ButtonItem>().priceItem.text = items[i].price.ToString();
             button.GetComponent<ButtonItem>().item = items[i];
+            // cb = button.GetComponent<ButtonItem>();
+            // cb.selectedColor = Color.red;
+            // button.GetComponent<ButtonItem>().colors = Color.red;
             button.GetComponent<Button>().onClick.AddListener((delegate {button.GetComponent<ButtonItem>().Buy();}));
         }
     }
      public void EndShop()
     {
         animator.SetBool("isOpen", false);
+        Time.timeScale = 1;
     }
 }

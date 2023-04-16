@@ -10,7 +10,7 @@ public class DemonAttack : MonoBehaviour
     private Transform target;
     private Animator myAnimator;
     public int damageOnTouch = 20;
-    private int saut = -1;
+    private int jump = -1;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,8 +18,13 @@ public class DemonAttack : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.transform.CompareTag("Player"))
+        {
+            PlayerHealth playerHealth = collision.transform.GetComponent<PlayerHealth>();
+            playerHealth.TakeDamage(damageOnTouch);
+        }
     }
      private void OnTriggerStay2D(Collider2D collision)
     {
@@ -35,7 +40,7 @@ public class DemonAttack : MonoBehaviour
              }else
              {
                 StartCoroutine(randint(collision));
-                if (saut == 1)
+                if (jump == 1)
                 {
                     StartCoroutine(Jump(collision));
                 }
@@ -62,6 +67,6 @@ public class DemonAttack : MonoBehaviour
     private IEnumerator randint(Collider2D collision)
     {
         yield return new WaitForSeconds(5f);
-          saut = Random.Range(0, 5);
+          jump = Random.Range(0, 5);
     }
 }
