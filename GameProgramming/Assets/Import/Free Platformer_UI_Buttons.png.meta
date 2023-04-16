@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -1272,9 +1272,9 @@ TextureImporter:
       Free Platformer_UI_Buttons_8: 564940119
       Free Platformer_UI_Buttons_52: -2032695654
       Free Platformer_UI_Buttons_49: 2106756523
-      Free Platformer_UI_Buttons_0: 1831626080
-      Free Platformer_UI_Buttons_25: -1469372579
       Free Platformer_UI_Buttons_48: 400423368
+      Free Platformer_UI_Buttons_25: -1469372579
+      Free Platformer_UI_Buttons_0: 1831626080
       Free Platformer_UI_Buttons_13: -639677694
       Free Platformer_UI_Buttons_19: 720199082
       Free Platformer_UI_Buttons_22: 374481387

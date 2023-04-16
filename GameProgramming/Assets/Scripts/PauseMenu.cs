@@ -8,6 +8,9 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenuUI;
     public GameObject settingMenuUI;
 
+    public GameObject ControlMenuUI;
+
+
     public EventSystem eventSystem;
 
 
@@ -42,6 +45,7 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0;
         GameIsPaused = true;
+        
 
         eventSystem.SetSelectedGameObject(pauseMenuUI.transform.GetChild(1).gameObject);
     }
@@ -58,5 +62,17 @@ public class PauseMenu : MonoBehaviour
     public void CloseSettingMenu()
     {
         settingMenuUI.SetActive(false);
+    }
+
+
+    public void ControlMenu()
+    {
+        ControlMenuUI.SetActive(true);
+        eventSystem.SetSelectedGameObject(ControlMenuUI.transform.GetChild(0).gameObject);
+    }
+    public void CloseControlMenu()
+    {
+        ControlMenuUI.SetActive(false);
+        eventSystem.SetSelectedGameObject(pauseMenuUI.transform.GetChild(1).gameObject);
     }
 }

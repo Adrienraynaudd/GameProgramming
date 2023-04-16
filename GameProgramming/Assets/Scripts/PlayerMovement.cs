@@ -69,7 +69,7 @@ public class PlayerMovement : MonoBehaviour
 
     void OnJump()
     {
-        if (isGrounded)
+        if (isGrounded && Time.timeScale != 0)
         {
             rb.AddForce(new Vector2(0f, JumpForce));
         }

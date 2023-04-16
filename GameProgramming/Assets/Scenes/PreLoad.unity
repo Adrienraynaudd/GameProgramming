@@ -161,6 +161,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Text Items
       objectReference: {fileID: 0}
+    - target: {fileID: 1183750456, guid: 3a7141444dd14b8478a493f4660973de, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1809387633, guid: 3a7141444dd14b8478a493f4660973de, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -177,6 +181,38 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1073570885}
+    - target: {fileID: 2511095529903275569, guid: 3a7141444dd14b8478a493f4660973de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2511095529903275569, guid: 3a7141444dd14b8478a493f4660973de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2511095529903275569, guid: 3a7141444dd14b8478a493f4660973de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1073570885}
+    - target: {fileID: 2511095529903275569, guid: 3a7141444dd14b8478a493f4660973de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2511095529903275569, guid: 3a7141444dd14b8478a493f4660973de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ControlMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2511095529903275569, guid: 3a7141444dd14b8478a493f4660973de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PauseMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2511095529903275569, guid: 3a7141444dd14b8478a493f4660973de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4010817916480603105, guid: 3a7141444dd14b8478a493f4660973de, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6928289475571937298, guid: 3a7141444dd14b8478a493f4660973de, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -185,6 +221,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1073570885}
+    - target: {fileID: 6928289475648135859, guid: 3a7141444dd14b8478a493f4660973de, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6928289475780948403, guid: 3a7141444dd14b8478a493f4660973de, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -297,6 +337,38 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1073570885}
+    - target: {fileID: 6928289477198666065, guid: 3a7141444dd14b8478a493f4660973de, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6928289477198666065, guid: 3a7141444dd14b8478a493f4660973de, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6928289477198666065, guid: 3a7141444dd14b8478a493f4660973de, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7107880373656204397, guid: 3a7141444dd14b8478a493f4660973de, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.b
+      value: 0.53207546
+      objectReference: {fileID: 0}
+    - target: {fileID: 7107880373656204397, guid: 3a7141444dd14b8478a493f4660973de, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.g
+      value: 0.53207546
+      objectReference: {fileID: 0}
+    - target: {fileID: 7107880373656204397, guid: 3a7141444dd14b8478a493f4660973de, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7107880373656204397, guid: 3a7141444dd14b8478a493f4660973de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1073570885}
+    - target: {fileID: 7107880373656204397, guid: 3a7141444dd14b8478a493f4660973de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CloseControlMenu
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a7141444dd14b8478a493f4660973de, type: 3}
 --- !u!114 &53672957 stripped
@@ -350,6 +422,11 @@ GameObject:
 --- !u!95 &53672963 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 1183750460, guid: 3a7141444dd14b8478a493f4660973de, type: 3}
+  m_PrefabInstance: {fileID: 53672956}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &74879920 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4010817916480603105, guid: 3a7141444dd14b8478a493f4660973de, type: 3}
   m_PrefabInstance: {fileID: 53672956}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &395891093 stripped
@@ -682,6 +759,10 @@ PrefabInstance:
       propertyPath: pauseMenuUI
       value: 
       objectReference: {fileID: 53672962}
+    - target: {fileID: 7891626461866894355, guid: 4c436c17c6a7208448c290e8e37ecb80, type: 3}
+      propertyPath: ControlMenuUI
+      value: 
+      objectReference: {fileID: 74879920}
     - target: {fileID: 7891626461866894355, guid: 4c436c17c6a7208448c290e8e37ecb80, type: 3}
       propertyPath: settingMenuUI
       value: 
