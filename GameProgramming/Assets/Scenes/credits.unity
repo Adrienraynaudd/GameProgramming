@@ -505,15 +505,70 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "<SIZE=100><B>2D GAME</B></SIZE>\n\n<SIZE=80><B>DEVELOPER</B>:</SIZE>\n\nAdrien
-    Raynaud\nFlorient Quicy\nPaul Piauger\n\n<SIZE=80><B>ASSETS USED</B></SIZE>\n\n<SIZE=60>*GRAPHICS*</SIZE>\n\nPixel
-    Adventure - Pixel Frog\nLegacy Adventure Pack - Anokolisa\nPixel TileMap Platformer
-    -BDragon1727\nPlatformer UI Buttons - BDragon1727\nFree Trap Platformer - BDragon1727\nChests
-    And Coins - Jan Schneider\nGothicvania Patreon's Collection - ansimuz\n2D Pixel
-    Art Portal Sprites - Elthen's Pixel Art Shop\nZec chest-potion\n\n<SIZE=60>*AUDIO*</SIZE>\n\n
-    Hero Immortal - trevor lentz\nBob's Adventures - back34 - Tom Peter\n8-Bit Sound
-    Library - Little Robot Sound Factory\n\n<SIZE=80><B>SPECIAL THANKS</B></SIZE>\n\nZec
-    For the tutorials\n\n"
+  m_text: '<SIZE=100><B>2D GAME</B></SIZE>
+
+
+    <SIZE=80><B>DEVELOPER</B>:</SIZE>
+
+
+    Adrien
+    Raynaud
+
+    Florien Quicy
+
+    Paul Piauger
+
+
+    <SIZE=80><B>ASSETS USED</B></SIZE>
+
+
+    <SIZE=60>*GRAPHICS*</SIZE>
+
+
+    Pixel
+    Adventure - Pixel Frog
+
+    Legacy Adventure Pack - Anokolisa
+
+    Pixel TileMap
+    Platformer -BDragon1727
+
+    Platformer UI Buttons - BDragon1727
+
+    Free Trap
+    Platformer - BDragon1727
+
+    Chests And Coins - Jan Schneider
+
+    Gothicvania
+    Patreon''s Collection - ansimuz
+
+    2D Pixel Art Portal Sprites - Elthen''s
+    Pixel Art Shop
+
+    Zec chest-potion
+
+
+    <SIZE=60>*AUDIO*</SIZE>
+
+
+    Hero
+    Immortal - trevor lentz
+
+    Bob''s Adventures - back34 - Tom Peter
+
+    8-Bit
+    Sound Library - Little Robot Sound Factory
+
+
+    <SIZE=80><B>SPECIAL THANKS</B></SIZE>
+
+
+    Zec
+    For the tutorials
+
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
