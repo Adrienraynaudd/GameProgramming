@@ -1,8 +1,15 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:GameProgramming/Assets/Tiles/lab tileset finished transparent_0.asset.meta
 guid: 5bd7ee97e31aeda41bcd05464535d9d6
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 11400000
+=======
+guid: 93cde2b8f918a6b4089ee0e678458e0f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+>>>>>>> f1858c47cb6139baf62b9d5ad63f7f54be2d19d5:GameProgramming/Assets/Tiles/idle.anim.meta
   userData: 
   assetBundleName: 
   assetBundleVariant: 

@@ -17,6 +17,7 @@ public class ButtonItem : MonoBehaviour
         if(Inventory.instance.coinCount >= item.price)
         {
             Inventory.instance.coinCount -= item.price;
+            CurrentSceneManager.instance.CoinsPickedUp -= item.price;
             Inventory.instance.items.Add(item);
             Inventory.instance.UpdateUI();
             Inventory.instance.UpdateCoinUI();
