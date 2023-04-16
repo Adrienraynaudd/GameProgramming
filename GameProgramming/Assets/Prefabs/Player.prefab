@@ -252,7 +252,7 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 0}
-  invincibilityTime: 3
+  invincibilityTime: 1
   invincibilityFlashDelay: 0.2
   graphics: {fileID: 8281617875601829130}
   isinvincible: 0
