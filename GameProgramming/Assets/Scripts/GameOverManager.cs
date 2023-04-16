@@ -27,6 +27,7 @@ public class GameOverManager : MonoBehaviour
     public void RestartButton()
     {
         Inventory.instance.RemoveCoin(CurrentSceneManager.instance.CoinsPickedUp);
+        CurrentSceneManager.instance.CoinsPickedUp = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         PlayerHealth.instance.respawnPlayer();
         gameOverUI.SetActive(false);

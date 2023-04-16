@@ -16,7 +16,7 @@ public class LoadAndSaveScene : MonoBehaviour
     void Start()
     {
         Inventory.instance.coinCount = PlayerPrefs.GetInt("CoinCount", 0);
-        Inventory.instance.UpdateTextUI();
+        Inventory.instance.UpdateCoinUI();
         int CurrentHealth = PlayerPrefs.GetInt("PlayerHeal",PlayerHealth.instance.maxHealth);
         PlayerHealth.instance.currentHealth =CurrentHealth;
         PlayerHealth.instance.healthBar.SetHealth(CurrentHealth);

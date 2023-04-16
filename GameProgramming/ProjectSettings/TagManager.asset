@@ -10,6 +10,8 @@ TagManager:
   - InteractUI
   - chest
   - pnj
+  - item
+  - shop
   layers:
   - Default
   - TransparentFX

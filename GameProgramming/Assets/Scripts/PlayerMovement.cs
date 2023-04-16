@@ -69,7 +69,7 @@ public class PlayerMovement : MonoBehaviour
 
     void OnJump()
     {
-        if (isGrounded)
+        if (isGrounded && Time.timeScale != 0)
         {
             rb.AddForce(new Vector2(0f, JumpForce));
         }
@@ -77,7 +77,9 @@ public class PlayerMovement : MonoBehaviour
 
     void OnPause()
     {
-        pauseMenu.OnPause();
+        if(PlayerHealth.instance.currentHealth > 0){
+            pauseMenu.OnPause();
+        }
     }
 
 
@@ -85,23 +87,26 @@ public class PlayerMovement : MonoBehaviour
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right * (GetComponent<CapsuleCollider2D>().size.x / 2), 1f, LayerMask.GetMask("Interactables"));
 
-        if (hit.collider == null || (hit.collider.tag != "chest" && hit.collider.tag != "pnj"))
+        if (hit.collider == null || (hit.collider.tag != "chest" && hit.collider.tag != "pnj" && hit.collider.tag != "item" && hit.collider.tag != "shop"))
         {
             hit = Physics2D.Raycast(transform.position, Vector2.left * (GetComponent<CapsuleCollider2D>().size.x / 2), 1f, LayerMask.GetMask("Interactables"));
         }
         if (hit.collider != null && hit.collider.tag == "chest")
         {
             hit.collider.GetComponent<Chest>().OnInteract();
-            Debug.Log("TEST");
         }
         else if (hit.collider != null && hit.collider.tag == "pnj")
         {
             hit.collider.GetComponent<dialogueTrigger>().OnInteract();
-            Debug.Log("TEST");
+        }else if (hit.collider != null && hit.collider.tag == "item")
+        {
+            hit.collider.GetComponent<PickUpItem>().OnInteract();
+        }else if (hit.collider != null && hit.collider.tag == "shop")
+        {
+            hit.collider.GetComponent<ShopTrigger>().OnInteract();
         }
+
     }
-
-
 
     private void OnDrawGizmos()
     {

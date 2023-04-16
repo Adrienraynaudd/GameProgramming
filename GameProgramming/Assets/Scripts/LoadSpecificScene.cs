@@ -24,6 +24,7 @@ public class LoadSpecificScene : MonoBehaviour
         AudioManager.instance.PlayClipAt(sound, transform.position);
         fadeSystem.SetTrigger("FadeIn");
         yield return new WaitForSeconds(2.36f);
+        CurrentSceneManager.instance.CoinsPickedUp = 0;
         SceneManager.LoadScene(sceneName);
     }
 }

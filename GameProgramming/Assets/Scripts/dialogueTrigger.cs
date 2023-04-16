@@ -12,15 +12,7 @@ public class dialogueTrigger : MonoBehaviour
     {
         interactUI = GameObject.FindGameObjectWithTag("InteractUI").GetComponent<Text>();
     }
-    void Update()
-    {
-        // if (isTriggered && Input.GetKeyDown(KeyCode.E))
-        // {
-        //     TriggerDialogue();
-        // }
-    }
-
-
+  
     public void OnInteract()
     {
         TriggerDialogue();
@@ -43,6 +35,7 @@ public class dialogueTrigger : MonoBehaviour
             isTriggered = false;
             
             interactUI.enabled = false;
+            DialogueManager.instance.EndDialogue();
         }
     }
      void TriggerDialogue()
