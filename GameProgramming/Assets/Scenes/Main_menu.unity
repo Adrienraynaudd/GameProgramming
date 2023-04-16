@@ -803,7 +803,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fdea32d1417eab4aa503d3c44b0122c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startLevel: lvl1
+  startLevel: lvl0
   settingMenu: {fileID: 1792235796}
 --- !u!1 &1731688381
 GameObject:
