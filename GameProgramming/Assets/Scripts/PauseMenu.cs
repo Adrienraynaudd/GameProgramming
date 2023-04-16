@@ -10,8 +10,16 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject ControlMenuUI;
 
+    public GameObject InventoryUI;
+
 
     public EventSystem eventSystem;
+
+
+    void Start()
+    {
+        eventSystem.SetSelectedGameObject(InventoryUI.transform.GetChild(1).gameObject);
+    }
 
 
     void Update()
@@ -35,14 +43,18 @@ public class PauseMenu : MonoBehaviour
     {
         PlayerMovement.instance.enabled = true;
         pauseMenuUI.SetActive(false);
+        InventoryUI.SetActive(true);
         Time.timeScale = 1;
         GameIsPaused = false;
+
+        eventSystem.SetSelectedGameObject(InventoryUI.transform.GetChild(1).gameObject);
     }
 
     void Pause()
     {
         PlayerMovement.instance.enabled = false;
         pauseMenuUI.SetActive(true);
+        InventoryUI.SetActive(false);
         Time.timeScale = 0;
         GameIsPaused = true;
         

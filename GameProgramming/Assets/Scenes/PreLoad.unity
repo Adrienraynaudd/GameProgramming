@@ -685,6 +685,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4010817916480603105, guid: 3a7141444dd14b8478a493f4660973de, type: 3}
   m_PrefabInstance: {fileID: 53672956}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &106945457 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 792941270299273283, guid: 3a7141444dd14b8478a493f4660973de, type: 3}
+  m_PrefabInstance: {fileID: 53672956}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &395891093 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1809387633, guid: 3a7141444dd14b8478a493f4660973de, type: 3}
@@ -1048,6 +1053,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7891626461866894355, guid: 4c436c17c6a7208448c290e8e37ecb80, type: 3}
+      propertyPath: InventoryUI
+      value: 
+      objectReference: {fileID: 106945457}
+    - target: {fileID: 7891626461866894355, guid: 4c436c17c6a7208448c290e8e37ecb80, type: 3}
       propertyPath: eventSystem
       value: 
       objectReference: {fileID: 2031142640}
@@ -1071,6 +1080,10 @@ PrefabInstance:
       propertyPath: eventSystem
       value: 
       objectReference: {fileID: 2031142640}
+    - target: {fileID: 7891626461866894356, guid: 4c436c17c6a7208448c290e8e37ecb80, type: 3}
+      propertyPath: inventoryUI
+      value: 
+      objectReference: {fileID: 106945457}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c436c17c6a7208448c290e8e37ecb80, type: 3}
 --- !u!114 &1073570885 stripped
