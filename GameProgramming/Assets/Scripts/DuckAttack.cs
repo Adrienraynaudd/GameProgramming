@@ -8,10 +8,11 @@ public class DuckAttack : MonoBehaviour
     public int damageOnTouch = 20;
     public int speed = 2;
     private Transform target;
-    public Projectile projectile;
+    public GameObject projectile;
     public Transform firePoint;
     public Transform firePoint2;
     public Animator myAnimator;
+    private bool isAttacking = false;
        private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.transform.CompareTag("Player"))
@@ -31,24 +32,33 @@ public class DuckAttack : MonoBehaviour
             if (dir.x > 0){
                 spriteRenderer.flipX = true;
                 transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
-                 StartCoroutine(BackFire(collision));
+                if (!isAttacking){
+                    StartCoroutine(Fire(collision));
+                    GameObject proj = Instantiate(projectile, firePoint2.position, firePoint2.rotation);
+                    proj.GetComponent<SpriteRenderer>().flipX = true;
+                    proj.GetComponent<SpriteRenderer>().flipY = false;
+                }
             }
             if (dir.x < 0){
                 spriteRenderer.flipX = false;
                 transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
-                StartCoroutine(Fire(collision));
+                if (!isAttacking)
+                {
+                    StartCoroutine(Fire(collision));
+                     GameObject proj = Instantiate(projectile, firePoint.position, firePoint.rotation);
+                    proj.GetComponent<SpriteRenderer>().flipX = true;
+                    proj.GetComponent<SpriteRenderer>().flipY = true;
+                }
+
             }
         }
     }
     private IEnumerator Fire(Collider2D collision)
     {
+        isAttacking = true;
         yield return new WaitForSeconds(1f);
-        Instantiate(projectile, firePoint.position, firePoint.rotation);
-    }
-     private IEnumerator BackFire(Collider2D collision)
-    {
-        yield return new WaitForSeconds(1f);
-        Instantiate(projectile, firePoint2.position, firePoint2.rotation);
+        isAttacking = false;
+        
     }
 
 }
