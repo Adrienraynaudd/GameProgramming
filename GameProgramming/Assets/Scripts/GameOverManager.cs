@@ -6,6 +6,8 @@ public class GameOverManager : MonoBehaviour
 {
 
     public EventSystem eventSystem;
+
+    public GameObject InventoryUI;
      public static GameOverManager instance;
 
    private void Awake()
@@ -22,6 +24,7 @@ public class GameOverManager : MonoBehaviour
     public void OnPlayerDeath()
     {
         gameOverUI.SetActive(true);
+        InventoryUI.SetActive(false);
         eventSystem.SetSelectedGameObject(gameOverUI.transform.GetChild(1).gameObject);
     }
     public void RestartButton()
@@ -31,6 +34,8 @@ public class GameOverManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         PlayerHealth.instance.respawnPlayer();
         gameOverUI.SetActive(false);
+        InventoryUI.SetActive(true);
+        eventSystem.SetSelectedGameObject(InventoryUI.transform.GetChild(1).gameObject);
     }
     public void MenuButton()
     {
