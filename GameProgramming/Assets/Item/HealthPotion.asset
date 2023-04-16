@@ -18,4 +18,5 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: d8be9f4f411be9c4fbd551e0d060f39b, type: 3}
   hp: 10
   speed: 0
+  price: 5
   duration: 0

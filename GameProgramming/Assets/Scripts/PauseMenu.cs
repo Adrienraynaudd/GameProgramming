@@ -58,10 +58,12 @@ public class PauseMenu : MonoBehaviour
     public void OpenSettingMenu()
     {
         settingMenuUI.SetActive(true);
+        eventSystem.SetSelectedGameObject(settingMenuUI.transform.GetChild(0).gameObject);
     }
     public void CloseSettingMenu()
     {
         settingMenuUI.SetActive(false);
+        eventSystem.SetSelectedGameObject(pauseMenuUI.transform.GetChild(1).gameObject);
     }
 
 

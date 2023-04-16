@@ -77,7 +77,9 @@ public class PlayerMovement : MonoBehaviour
 
     void OnPause()
     {
-        pauseMenu.OnPause();
+        if(PlayerHealth.instance.currentHealth > 0){
+            pauseMenu.OnPause();
+        }
     }
 
 
@@ -85,7 +87,7 @@ public class PlayerMovement : MonoBehaviour
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right * (GetComponent<CapsuleCollider2D>().size.x / 2), 1f, LayerMask.GetMask("Interactables"));
 
-        if (hit.collider == null || (hit.collider.tag != "chest" && hit.collider.tag != "pnj" && hit.collider.tag != "item"))
+        if (hit.collider == null || (hit.collider.tag != "chest" && hit.collider.tag != "pnj" && hit.collider.tag != "item" && hit.collider.tag != "shop"))
         {
             hit = Physics2D.Raycast(transform.position, Vector2.left * (GetComponent<CapsuleCollider2D>().size.x / 2), 1f, LayerMask.GetMask("Interactables"));
         }
@@ -99,7 +101,10 @@ public class PlayerMovement : MonoBehaviour
         }else if (hit.collider != null && hit.collider.tag == "item")
         {
             hit.collider.GetComponent<PickUpItem>().OnInteract();
-    }
+        }else if (hit.collider != null && hit.collider.tag == "shop")
+        {
+            hit.collider.GetComponent<ShopTrigger>().OnInteract();
+        }
 
     }
 

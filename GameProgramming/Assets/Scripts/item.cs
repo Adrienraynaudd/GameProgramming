@@ -9,5 +9,6 @@ public class item : ScriptableObject
     public Sprite icon;
     public int hp;
     public int speed;
+    public int price;
     public float duration;
 }
