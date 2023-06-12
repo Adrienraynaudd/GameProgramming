@@ -32,11 +32,17 @@ public class PlayerHealth : MonoBehaviour
     public void HealPlayer(int healAmount) // this is called for check if the player is healing
     {
         currentHealth += healAmount;
+        player.currentHealth += healAmount;
         if (currentHealth > maxHealth)
         {
             currentHealth = maxHealth;
         }
+        if (player.currentHealth > player.maxHealth)
+        {
+            player.currentHealth = player.maxHealth;
+        }
         healthBar.SetHealth(currentHealth);
+        healthBar2.SetHealth(player.currentHealth);
     }
     public void TakeDamage(int damage) // this is called for check if the player is taking damage
     {

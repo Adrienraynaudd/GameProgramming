@@ -41,10 +41,12 @@ void Start()
 }
     void Update() 
     {
-        InputDevice targetDevice = player1.devices[0];
-        InputDevice targetDevice2 = player2.devices[0];
-        player1.SwitchCurrentControlScheme(targetDevice);
-        player2.SwitchCurrentControlScheme(targetDevice2);
+        if (player1.devices.Count > 0 && player2.devices.Count > 0){
+            InputDevice targetDevice = player1.devices[0];
+            InputDevice targetDevice2 = player2.devices[0];
+            player1.SwitchCurrentControlScheme(targetDevice);
+            player2.SwitchCurrentControlScheme(targetDevice2);
+        }
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, collisionLayer); // this is called for check if the player is grounded
         MovePlayer(horizontalMovement);
 

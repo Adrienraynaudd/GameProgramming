@@ -621,6 +621,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1073570885}
+    - target: {fileID: 7617712063332247500, guid: 3a7141444dd14b8478a493f4660973de, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7800336601510953289, guid: 3a7141444dd14b8478a493f4660973de, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -1050,7 +1054,7 @@ PrefabInstance:
     - target: {fileID: 8281617874440807325, guid: de9967f3dff3771428f183482edd2064, type: 3}
       propertyPath: healthBar2
       value: 
-      objectReference: {fileID: 1130085532}
+      objectReference: {fileID: 53672957}
     - target: {fileID: 8281617874440807325, guid: de9967f3dff3771428f183482edd2064, type: 3}
       propertyPath: currentHealth
       value: 0

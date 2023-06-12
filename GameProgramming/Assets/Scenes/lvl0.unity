@@ -235,6 +235,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: skull (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7730277004540398943, guid: 6b2765d7a8165434f9582b52bdff4ad3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b2765d7a8165434f9582b52bdff4ad3, type: 3}
 --- !u!1001 &139970987
