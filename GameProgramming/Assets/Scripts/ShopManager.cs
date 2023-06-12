@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using System.Linq;
 using TMPro;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 public class ShopManager : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class ShopManager : MonoBehaviour
     public TextMeshProUGUI namePNJ;
     public static ShopManager instance;
     public EventSystem eventSystem;
+    public PlayerInput inputManager;
+    public PlayerInput inputManager2;
     private void Awake()
     {
         if (instance != null)
@@ -28,6 +31,8 @@ public class ShopManager : MonoBehaviour
     }
     public void Shop(item[] items, string name) // this is called to open the shop and show the items that the player can buy
     {
+        inputManager.enabled = false;
+            inputManager2.enabled = false;
         namePNJ.text = name;
         ItemToSell(items);
         animator.SetBool("isOpen", true);
@@ -53,7 +58,9 @@ public class ShopManager : MonoBehaviour
         }
     }
      public void EndShop() // this is called to close the shop
-    {
+    {  
+            inputManager.enabled = true;
+            inputManager2.enabled = true;
         animator.SetBool("isOpen", false);
         Time.timeScale = 1;
     }

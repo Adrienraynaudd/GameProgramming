@@ -46,6 +46,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07a10c30ac88dd348ba935feeb716301, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eventSystem: {fileID: 0}
+  InventoryUI: {fileID: 0}
   gameOverUI: {fileID: 0}
 --- !u!114 &7891626461866894355
 MonoBehaviour:
@@ -61,6 +63,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 0}
   settingMenuUI: {fileID: 0}
+  ControlMenuUI: {fileID: 0}
+  InventoryUI: {fileID: 0}
+  eventSystem: {fileID: 0}
 --- !u!114 &4098782152898346009
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -13,11 +14,13 @@ public class PauseMenu : MonoBehaviour
     public GameObject InventoryUI;
 
 
+
+
     public EventSystem eventSystem;
 
     void Start()
     {
-        eventSystem.SetSelectedGameObject(InventoryUI.transform.GetChild(1).gameObject);
+        eventSystem.SetSelectedGameObject(InventoryUI.transform.gameObject);
     }
 
     public void OnPause() // this is called to pause the game
@@ -35,6 +38,7 @@ public class PauseMenu : MonoBehaviour
     public void Continue() // this is called to continue the game
     {
         PlayerMovement.instance.enabled = true;
+            
         pauseMenuUI.SetActive(false);
         InventoryUI.SetActive(true);
         Time.timeScale = 1;
@@ -46,6 +50,7 @@ public class PauseMenu : MonoBehaviour
     void Pause() // this is called to pause the game and show the pause menu and disable the player movement
     {
         PlayerMovement.instance.enabled = false;
+        
         pauseMenuUI.SetActive(true);
         InventoryUI.SetActive(false);
         Time.timeScale = 0;

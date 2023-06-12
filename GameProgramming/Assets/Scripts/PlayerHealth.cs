@@ -5,25 +5,27 @@ using System.Collections;
 public class PlayerHealth : MonoBehaviour
 {
     public int maxHealth = 100;
-    public int currentHealth;
+    public int currentHealth = 100;
     public HealthBar healthBar;
+    public HealthBar healthBar2;
     public float invincibilityTime = 3f;
     public float invincibilityFlashDelay = 0.2f;
     public SpriteRenderer graphics;
     public bool isinvincible = false;
     public AudioClip hitSound;
 
+    public PlayerHealth player;
+    public PlayerMovement playerMov;
+
     public static PlayerHealth instance;
     
 
    private void Awake()
    {
-       if (instance != null)
-       {
-           Debug.LogWarning("More than one instance of PlayerHealth found!");
-           return;
-       }
        instance = this;
+   }
+   void Start(){
+    player.currentHealth = player.maxHealth;
    }
 
     // Update is called once per frame
@@ -75,15 +77,27 @@ public class PlayerHealth : MonoBehaviour
             PlayerMovement.instance.animator.SetTrigger("Die");
             PlayerMovement.instance.rb.bodyType = RigidbodyType2D.Static;
             PlayerMovement.instance.playerCollider.enabled = false;
+             PlayerMovement.instance.animator2.SetTrigger("Die");
+             playerMov.enabled = false;
+            playerMov.rb.bodyType = RigidbodyType2D.Static;
+            playerMov.playerCollider.enabled = false;
             GameOverManager.instance.OnPlayerDeath();
         }
         public void respawnPlayer() // this is called for check if the player is respawning
         {
             PlayerMovement.instance.enabled = true;
             PlayerMovement.instance.animator.SetTrigger("Respawn");
+            PlayerMovement.instance.animator2.SetTrigger("Respawn");
             PlayerMovement.instance.rb.bodyType = RigidbodyType2D.Dynamic;
             PlayerMovement.instance.playerCollider.enabled = true;
+            playerMov.enabled = true;
+            playerMov.rb.bodyType = RigidbodyType2D.Dynamic;
+            playerMov.playerCollider.enabled = true;
             currentHealth = maxHealth;
-            healthBar.SetHealth(currentHealth);
+            player.currentHealth = player.maxHealth;
+            player.transform.position = GameObject.FindGameObjectWithTag("PlayerSpawn").transform.position;
+             transform.position = GameObject.FindGameObjectWithTag("PlayerSpawn").transform.position;
+            healthBar.SetHealth(maxHealth);
+            healthBar2.SetHealth(maxHealth);
         }
 }

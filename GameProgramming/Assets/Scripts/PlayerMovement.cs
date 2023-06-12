@@ -19,30 +19,48 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     public CapsuleCollider2D playerCollider;
     public Animator animator;
+    public Animator animator2;
     public SpriteRenderer spriteRenderer;
     private Vector3 velocity = Vector3.zero;
+    public Transform playerMov;
+    public PlayerInput player1;
+    public PlayerInput player2;
     public static PlayerMovement instance;
 
     private float horizontalMovement;
 
     private void Awake()
     {
-        if (instance != null)
-        {
-            Debug.LogWarning("More than one instance of PlayerMouvement found!");
-            return;
-        }
         instance = this;
     }
     // Update is called once per frame
+
+void Start()
+{
+   
+}
     void Update() 
     {
+        InputDevice targetDevice = player1.devices[0];
+        InputDevice targetDevice2 = player2.devices[0];
+        player1.SwitchCurrentControlScheme(targetDevice);
+        player2.SwitchCurrentControlScheme(targetDevice2);
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, collisionLayer); // this is called for check if the player is grounded
         MovePlayer(horizontalMovement);
 
         Flip(rb.velocity.x);
         float characterVelocity = Mathf.Abs(rb.velocity.x);
+        if (animator.gameObject.activeSelf){
         animator.SetFloat("Speed", characterVelocity);
+        }
+        animator2.SetFloat("Speed", characterVelocity);
+        Vector3 dir = playerMov.position - transform.position;
+        if (dir.x > 19){
+            playerMov.position = new Vector3(transform.position.x , transform.position.y, 0);
+        }else if (dir.x < -19){
+            playerMov.position = new Vector3(transform.position.x , transform.position.y, 0);
+        }
+         
     }
     void MovePlayer(float _horizontalMovement) // this is called for move the player
     {

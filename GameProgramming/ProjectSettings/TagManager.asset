@@ -12,6 +12,7 @@ TagManager:
   - pnj
   - item
   - shop
+  - p2
   layers:
   - Default
   - TransparentFX

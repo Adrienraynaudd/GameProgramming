@@ -26,6 +26,7 @@ public class PlayerCombat : MonoBehaviour
     {
         animator.SetTrigger("Attack");
 
+
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers); // this is called for check if the player is attacking and if it is true then the enemy will take damage
 
         foreach (Collider2D enemy in hitEnemies)

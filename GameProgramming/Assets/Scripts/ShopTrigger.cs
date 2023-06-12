@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 public class ShopTrigger : MonoBehaviour
 {
@@ -8,6 +10,8 @@ public class ShopTrigger : MonoBehaviour
     // Update is called once per frame
     public string namePNJ;
     public item[] items;
+    public PlayerInput inputManager;
+    public PlayerInput inputManager2;
     private void Awake()
     {
         interactUI = GameObject.FindGameObjectWithTag("InteractUI").GetComponent<Text>();
@@ -24,7 +28,6 @@ public class ShopTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isTriggered = true;
-            
             interactUI.enabled = true;
         }
     }

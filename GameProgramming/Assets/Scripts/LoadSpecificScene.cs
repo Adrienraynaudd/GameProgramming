@@ -26,5 +26,6 @@ public class LoadSpecificScene : MonoBehaviour
         yield return new WaitForSeconds(2.36f);
         CurrentSceneManager.instance.CoinsPickedUp = 0;
         SceneManager.LoadScene(sceneName);
+        PlayerPrefs.SetString("startLevel", sceneName);
     }
 }

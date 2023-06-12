@@ -10,6 +10,7 @@ public class Chest : MonoBehaviour
     public int coinsToGive;
     public AudioClip openChestSound;
 
+
     void Awake()
     {
         interactUI = GameObject.FindGameObjectWithTag("InteractUI").GetComponent<Text>(); // this is called to show the text "press E to interact"
